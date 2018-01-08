@@ -58,6 +58,7 @@ class ExpertController extends BaseController
 
     public function editor()
     {
+        $a = [];
         $expertModel = M('expert');
         if(IS_POST) {
             if(false === $expertModel->create($_POST)) {
