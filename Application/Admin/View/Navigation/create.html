@@ -1,0 +1,25 @@
+<extend name="Public:layer_base"/>
+<block name="body">
+    <form role="form" method="post" action="{:U('Navigation/create')}" class="create_page valid_form">
+        <div class="form-group">
+            <label>上级导航</label>
+            <select name="pid" class="form-control">
+                <volist name="navigation_list" id="vo">
+                    <option value="{$vo.id}" <if condition="$vo['id'] eq $this_pid">selected = "selected"</if>>{$vo.name}</option>
+                </volist>
+            </select>
+        </div>
+        <div class="form-group">
+            <label>导航名称</label>
+            <input type="text" name="name" class="form-control" autocomplete="off" placeholder="请输入导航名称">
+        </div>
+        <div class="form-group">
+            <label>导航链接</label>
+            <input type="text" name="url" class="form-control" autocomplete="off" placeholder="请输入导航链接">
+        </div>
+        <div class="form-group">
+            <label></label>
+            <button type="submit" class="btn btn-primary btn-block">保存</button>
+        </div>
+    </form>
+</block>

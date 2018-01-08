@@ -1,0 +1,65 @@
+<extend name="Public:base"/>
+<block name="body">
+    <ol class="breadcrumb admin_nav_bread">
+        <button type="button" class="btn btn-sm btn-success create_layer" url="{:U('Config/create',array('group_id'=>$group_id))}" layer-w="450px;" layer-h="500px;">添加设置</button>
+        <button type="button" class="btn btn-sm btn-primary list_save">保存操作</button>
+    </ol>
+    <form action="{:U('Config/list_form')}" method="post" class="valid_form list_form">
+        <table class="table table-hover table-condensed table_list">
+            <thead>
+            <tr class="active">
+                <th width="5%">排序</th>
+                <th width="25%">参数名称</th>
+                <th width="25%">参数值</th>
+                <th width="15%">单位/数量</th>
+                <th width="20%">变量名称</th>
+                <th width="10%">操作</th>
+            </tr>
+            </thead>
+            <tbody>
+                <empty name="config_list">
+                    <tr>
+                        <td align="center" colspan="6">
+                            <span style="color: red;">暂无数据</span>
+                        </td>
+                    </tr>
+                <else/>
+                    <volist name="config_list" id="vo">
+                        <tr>
+                            <td align="center">
+                                <input type="text" name="sort[{$vo.id}]" value="{$vo.sort}" class="form-control input-mini" autocomplete="off" style="text-align:center;">
+                            </td>
+                            <td align="center">{$vo.name}</td>
+                            <td align="center">
+                                <switch name="vo.type">
+                                    <case value="string">
+                                        <input type="text" autocomplete="off" class="form-control" name="value[{$vo.id}]" value="{$vo.value}">
+                                    </case>
+                                    <case value="bstring">
+                                        <textarea class="form-control" rows="3" name="value[{$vo.id}]">{$vo.value}</textarea>
+                                    </case>
+                                    <case value="image">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" id="f_upload{$vo.id}" name="value[{$vo.id}]" value="{$vo.value}" readonly>
+                                            <label class="input-group-addon upload_image" for="f_upload{$vo.id}" style="cursor:pointer;">选择图片</label>
+                                        </div>
+                                    </case>
+                                    <case value="bool">
+                                        <input type="radio" name="value[{$vo.id}]" value='1'<if condition="$vo['value'] eq 1">checked = checked</if>> 是
+                                        <input type="radio" name="value[{$vo.id}]" value='0'<if condition="$vo['value'] eq 0">checked = checked</if>> 否
+                                    </case>
+                                </switch>
+                            </td>
+                            <td align="center">{$vo.unit}</td>
+                            <td align="center">{$vo.varname}</td>
+                            <td align="center">
+                                <button type="button" class="btn btn-sm btn-info create_layer" url="{:U('Config/editor',array('id'=>$vo['id']))}" layer-w="450px;" layer-h="500px;">修改</button>
+                                <button type="button" class="btn btn-sm btn-danger ajax_get confirm" url="{:U('Config/remove',array('id'=>$vo['id']))}">删除</button>
+                            </td>
+                        </tr>
+                    </volist>
+                </empty>
+            </tbody>
+        </table>
+    </form>
+</block>

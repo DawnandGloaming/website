@@ -1,0 +1,60 @@
+<extend name="Public:base"/>
+<block name="body">
+    <ol class="breadcrumb admin_nav_bread">
+        <button type="button" class="btn btn-sm btn-success create_layer" url="{:U('Navigation/create',array('pid'=>$_GET['pid']))}" layer-w="450px;" layer-h="400px;">添加导航</button>
+        <button type="button" class="btn btn-sm btn-primary list_save">保存操作</button>
+    </ol>
+    <form action="{:U('Navigation/list_form')}" method="post" class="valid_form list_form">
+        <table class="table table-hover table-condensed table_list">
+            <thead>
+                <tr class="active">
+                    <th width="5%">排序</th>
+                    <th width="25%">导航名称</th>
+                    <th width="25%">上级导航</th>
+                    <th width="15%">是否显示</th>
+                    <th width="20%">链接</th>
+                    <th width="10%">操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <empty name="navigation_list">
+                    <tr>
+                        <td align="center" colspan="6">
+                            <span style="color: red;">暂无数据</span>
+                        </td>
+                    </tr>
+                <else/>
+                    <volist name="navigation_list" id="vo">
+                        <tr>
+                            <td align="center">
+                                <input type="text" name="sort[{$vo.id}]" value="{$vo.sort}" class="form-control input-mini" autocomplete="off" style="text-align:center;">
+                            </td>
+                            <td align="center">
+                                <eq name="vo.pid" value="0">
+                                    <a href="{:U('Navigation/index',array('pid'=>$vo['id']))}">{$vo.name}</a>
+                                <else/>
+                                    {$vo.name}
+                                </eq>
+                            </td>
+                            <td align="center">
+                                {$vo.pid_name}<empty name="vo.pid_name">顶级导航</empty>
+                            </td>
+                            <td align="center">
+                                <if condition="$vo.is_show eq 1">
+                                    <span class="ajax_get" url="{:U('change_status',array('type'=>'is_show','is_show'=>$vo['is_show'],'id'=>$vo['id']))}" style="color: green;cursor:pointer;">是</span>
+                                <else/>
+                                    <span class="ajax_get" url="{:U('change_status',array('type'=>'is_show','is_show'=>$vo['is_show'],'id'=>$vo['id']))}" style="color: red;cursor:pointer;">否</span>
+                                </if>
+                            </td>
+                            <td align="center">{$vo.url}</td>
+                            <td align="center">
+                                <button type="button" class="btn btn-sm btn-info create_layer" url="{:U('Navigation/editor',array('id'=>$vo['id']))}" layer-w="450px;" layer-h="400px;">修改</button>
+                                <button type="button" class="btn btn-sm btn-danger ajax_get confirm" url="{:U('Navigation/remove',array('id'=>$vo['id']))}">删除</button>
+                            </td>
+                        </tr>
+                    </volist>
+                </empty>
+            </tbody>
+        </table>
+    </form>
+</block>

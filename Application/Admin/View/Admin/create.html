@@ -1,0 +1,41 @@
+<extend name="Public:layer_base"/>
+<block name="body">
+    <form role="form" method="post" action="{:U('Admin/create')}" class="create_page valid_form">
+        <div class="form-group">
+            <label>设置分组</label>
+            <select name="group_id" class="form-control">
+                <volist name="group_list" id="vo">
+                    <option value="{$vo.id}">{$vo.name}</option>
+                </volist>
+            </select>
+        </div>
+        <div class="form-group">
+            <label>用户名</label>
+            <input type="text" name="nickname" class="form-control" autocomplete="off" placeholder="请输入用户名">
+        </div>
+        <div class="form-group">
+            <label>密码</label>
+            <input type="password" name="password" class="form-control" autocomplete="off" placeholder="请输入密码">
+        </div>
+        <div class="form-group">
+            <label>确认密码</label>
+            <input type="password" name="passwords" class="form-control" autocomplete="off" placeholder="请输入确认密码">
+        </div>
+        <div class="form-group">
+            <label>真实姓名</label>
+            <input type="text" name="truename" class="form-control" autocomplete="off" placeholder="请输入真实姓名">
+        </div>
+        <div class="form-group">
+            <label>手机</label>
+            <input type="text" name="phone" class="form-control" autocomplete="off" placeholder="请输入手机">
+        </div>
+        <div class="form-group">
+            <label>邮箱</label>
+            <input type="text" name="email" class="form-control" autocomplete="off" placeholder="请输入邮箱">
+        </div>
+        <div class="form-group">
+            <label></label>
+            <button type="submit" class="btn btn-primary btn-block">保存</button>
+        </div>
+    </form>
+</block>

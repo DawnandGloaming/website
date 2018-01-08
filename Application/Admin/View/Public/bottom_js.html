@@ -1,0 +1,20 @@
+<script src="__PLUGIN__/validate/validform_v5.3.2.js"></script>
+<script src="__PLUGIN__/layer/layer.js"></script>
+<script src="__COMMON__/jquery.form.js"></script>
+<script src="__COMMON__/create_layer.js"></script>
+<script src="__COMMON__/jquery.submit.js"></script>
+<link href="__PLUGIN__/kindeditor/themes/default/default.css" rel="stylesheet"/>
+<script src="__PLUGIN__/kindeditor/kindeditor.js"></script>
+<script src="__PLUGIN__/kindeditor/lang/zh_CN.js"></script>
+<include file="Public:uploadimage"/>
+<script>
+    function check_langlage(language) {
+        $.ajax({
+            type: "GET",
+            url: "{:U('switch_language')}",
+            data: { for_language : language}
+        }).done(function() {
+            window.location.reload();
+        });
+    }
+</script>

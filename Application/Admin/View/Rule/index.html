@@ -1,0 +1,79 @@
+<extend name="Public:base"/>
+<block name="body">
+    <ol class="breadcrumb admin_nav_bread">
+        <button type="button" class="btn btn-sm btn-primary ajax_get" url="{:U('Rule/get_all_rule')}">更新规则</button>
+    </ol>
+    <table class="table table-hover table-condensed table_list">
+        <thead>
+        <tr class="active">
+            <th width="15%">名称</th>
+            <th width="10%">排序</th>
+            <th width="60%">规则</th>
+            <th width="15%">操作</th>
+        </tr>
+        </thead>
+        <tbody>
+        <empty name="rule_list">
+            <tr>
+                <td align="center" colspan="6">
+                    <span style="color: red;">暂无规则</span>
+                </td>
+            </tr>
+        <else/>
+            <volist name="rule_list" id="vo">
+                <tr class="tr_tree column_{$vo.pid} column_id_{$vo.id}" data-level="{$vo['level']}" data-id="{$vo.id}" data-pid="{$vo.pid}">
+                    <td align="left">
+                        <span class="glyphicon glyphicon-plus" aria-hidden="true" style="cursor: pointer;" onclick="handleTree($(this),'{$vo.id}')"></span>
+                        <span class="tree_img">&nbsp;&nbsp;<img src="__IMAGES__/bg_column.gif"></span>{$vo.name}
+                    </td>
+                    <td align="center">{$vo.sort}</td>
+                    <td align="center">{$vo.rule}</td>
+                    <td align="center">
+                        <button type="button" class="btn btn-sm btn-danger ajax_get confirm" url="{:U('Rule/remove',array('id'=>$vo['id']))}">删除</button>
+                    </td>
+                </tr>
+            </volist>
+        </empty>
+        </tbody>
+    </table>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('.tr_tree').each(function(){
+                var glyphicon = $(this).find('.glyphicon');
+                var tree_img = $(this).find('.tree_img');
+                var tr_level = $(this).attr('data-level');
+                var id = $(this).attr('data-id');
+                nextobj=$(this).next('.column_'+id).attr('data-id');
+                if(tr_level != 1){
+                    $(this).hide();
+                    glyphicon.hide();
+                }else {
+                    tree_img.hide();
+                }
+            })
+        })
+        function handleTree(my,id,tp){
+            var son = $('.column_'+id);
+            if (son){
+                if (son.is(":hidden")){
+                    if(!tp){
+                        son.show();
+                        if(my.hasClass('glyphicon-plus')) {
+                            my.removeClass('glyphicon-plus').addClass('glyphicon-minus');
+                        }
+                    }
+                }else{
+                    son.hide();
+                    if(my.hasClass('glyphicon-minus')){
+                        my.removeClass('glyphicon-minus').addClass('glyphicon-plus');
+                    }
+                    son.each(function(){
+                        var sid = $(this).attr('id');
+                        var sson = $(this).find(".columnname");
+                        if (sid) oncolumn(sson,sid,1);
+                    })
+                }
+            }
+        }
+    </script>
+</block>

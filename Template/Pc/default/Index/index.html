@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="__COMMON__/jquery.min.js"></script>
+</head>
+<body>
+<div>home page</div>
+<a href="{:U('Member/register')}">注册</a>
+<a href="javascript:void(0);" class="for_language" onclick="check_langlage()">english</a>
+</body>
+<script>
+    function check_langlage() {
+        var for_language = $('.for_language').text();
+        $.ajax({
+            type: "GET",
+            url: "{:U('switch_language')}",
+            data: { for_language : for_language}
+        }).done(function() {
+            window.location.reload();
+        });
+    }
+</script>
+</html>

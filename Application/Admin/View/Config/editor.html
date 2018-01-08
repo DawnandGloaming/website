@@ -1,0 +1,45 @@
+<extend name="Public:layer_base"/>
+<block name="body">
+    <form role="form" method="post" action="{:U('Config/editor')}" class="create_page valid_form">
+        <div class="form-group">
+            <label>设置分组</label>
+            <select name="group_id" class="form-control">
+                <volist name="config_type_list" id="vo">
+                    <option value="{$vo.id}" <if condition="$config_info['group_id'] eq $vo['id']">selected</if>>{$vo.name}</option>
+                </volist>
+            </select>
+        </div>
+        <div class="form-group">
+            <label>设置名称</label>
+            <input type="text" name="name" value="{$config_info.name}" class="form-control" autocomplete="off" placeholder="请输入设置名称">
+        </div>
+        <div class="form-group">
+            <label>变量名称</label>
+            <input type="text" name="varname" value="{$config_info.varname}" class="form-control" autocomplete="off" placeholder="请输入变量名称">
+        </div>
+        <div class="form-group">
+            <label>单位/数量</label>
+            <input type="text" name="unit" value="{$config_info.unit}" class="form-control" autocomplete="off" placeholder="请输入单位/数量">
+        </div>
+        <label>设置类型</label>
+        <div class="form-group">
+            <label class="checkbox-inline">
+                <input type="radio" name="type" value="string" <if condition="$config_info['type'] eq 'string'">checked="checked"</if>>单行文本
+            </label>
+            <label class="checkbox-inline">
+                <input type="radio" name="type" value="bstring" <if condition="$config_info['type'] eq 'bstring'">checked="checked"</if>>多行文本
+            </label>
+            <label class="checkbox-inline">
+                <input type="radio" name="type" value="image" <if condition="$config_info['type'] eq 'image'">checked="checked"</if>>图片上传
+            </label>
+            <label class="checkbox-inline">
+                <input type="radio" name="type" value="bool" <if condition="$config_info['type'] eq 'bool'">checked="checked"</if>>枚举
+            </label>
+        </div>
+        <div class="form-group">
+            <label></label>
+            <input type="hidden" name="id" value="{$config_info.id}">
+            <button type="submit" class="btn btn-primary btn-block">保存</button>
+        </div>
+    </form>
+</block>

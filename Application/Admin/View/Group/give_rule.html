@@ -1,0 +1,53 @@
+<extend name="Public:base"/>
+<block name="body">
+    <ol class="breadcrumb admin_nav_bread">
+        <button type="button" class="btn btn-sm btn-primary list_save">保存操作</button>
+    </ol>
+    <form action="{:U('Group/give_rule')}" method="post" class="valid_form list_form">
+        <ul class="list-group">
+            <li class="list-group-item active">
+                <label class="checkbox-inline" level="0">
+                    <input class="checkboxs" type="checkbox" value="option3">超级管理员权限系列
+                </label>
+            </li>
+            <volist name="rule_list" id="vo">
+                <li class="list-group-item" style="background: #d5d5d5;">
+                    <label class="checkbox-inline">
+                        <input class="checkboxs" type="checkbox" id="{$vo.id}" name="access[]" pid="{$vo.pid}" mark="{$vo.id}_{$vo.level}" value="{$vo.id}" level="{$vo.level}" <if condition="$vo['access']">checked='true'</if>>
+                        {$vo.name}
+                    </label>
+                </li>
+                    <li class="list-group-item">
+                        <volist name="vo['_child']" id="voo">
+                            <label class="checkbox-inline" style="margin-left:20px;">
+                                <input class="checkboxs" type="checkbox" id="{$voo.id}" name="access[]" pid="{$voo.pid}" mark="{$voo.id}_{$voo.level}" value="{$voo.id}" level="{$voo.level}" <if condition="$voo['access']">checked='true'</if>>
+                                {$voo.name}
+                            </label>
+                        </volist>
+                    </li>
+            </volist>
+        </ul>
+        <input type="hidden" name="id" value="{$_GET['id']}">
+    </form>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.checkboxs').click(function () {
+                var level = $(this).attr('level');
+                if (level == 1) {
+                    var id = $(this).attr('id');
+                    var inputs = $('input[pid=' + id + ']');
+                    $(this).prop('checked') ? inputs.prop('checked', true) : inputs.prop('checked', false);
+                } else if (level == 2) {
+                    var pid = $(this).attr('pid');
+                    $('input[id=' + pid + ']').prop('checked', true);
+                    var ppid = $('input[id=' + pid + ']').prop('pid');
+                    $('input[id=' + ppid + ']').prop('checked', true);
+                } else {
+                    var str = '_';
+                    var inputs = $('input[mark*=' + str + ']');
+                    $(this).prop('checked') ? inputs.prop('checked', true) : inputs.prop('checked', false);
+                }
+            });
+        });
+    </script>
+</block>

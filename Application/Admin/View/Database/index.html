@@ -1,0 +1,44 @@
+<extend name="Public:base"/>
+<block name="body">
+    <nav class="navbar navbar-default" role="navigation" style="margin-bottom: 0px;">
+        <div class="container-fluid">
+            <div>
+                <a href="{:U('index',array('Action'=>'backup'))}" class="ajax_get">
+                    <button type="button" class="btn btn-success navbar-btn">立即备份</button>
+                </a>
+            </div>
+        </div>
+    </nav>
+    <table class="table table-hover table_list">
+        <thead>
+        <tr class="active">
+            <th width="10%" style="text-align: center;">顺序</th>
+            <th width="20%" style="text-align: center;">文件名</th>
+            <th width="20%" style="text-align: center;">备份时间</th>
+            <th width="20%" style="text-align: center;">文件大小</th>
+            <th width="10%" style="text-align: center;">操作</th>
+        </tr>
+        </thead>
+        <tbody>
+        <volist name="sql_list" id="vo">
+            <tr>
+                <td align="center" >{$key+1}</td>
+                <td align="center" >{$vo.filename}</td>
+                <td align="center" >{$vo.filetime}</td>
+                <td align="center" >{$vo.filesize}</td>
+                <td align="center">
+                    <a href="{:U('index',array('Action'=>'download','file'=>$vo['filename']))}">
+                        <button type="button" class="btn btn-primary btn-xs">下载</button>
+                    </a>
+                    <a class="ajax_get confirm" href="{:U('index',array('Action'=>'RL','file'=>$vo['filename']))}">
+                        <button type="button" class="btn btn-primary btn-xs">还原</button>
+                    </a>
+                    <a class="ajax_get confirm" confirm="您确定要删除吗？" href="{:U('index',array('Action'=>'Del','file'=>$vo['filename']))}">
+                        <button type="button" class="btn btn-primary btn-xs">删除</button>
+                    </a>
+                </td>
+            </tr>
+        </volist>
+        </tbody>
+    </table>
+</block>

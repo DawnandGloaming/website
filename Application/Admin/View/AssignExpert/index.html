@@ -1,0 +1,101 @@
+<extend name="Public:base"/>
+<block name="body">
+    <assign name="Think.get.year_id" value="<script>$('select').val()</script>"/>
+    <script>
+        $(document).ready(function () {
+            $("#search_expert").click(function () {
+                alert($('assign').val());
+            });
+        });
+    </script>
+    <div class="top_text">
+        <span style="float: left; padding-top: 8px">请选择评审年份:</span>
+        <div class="col-lg-6 form-group" style="float: left">
+            <div class="input-group">
+                <select name="year_id" class="form-control">
+                    <volist name="year_list" id="vo">
+                        <option value="{$vo.id}">{$vo.name}</option>
+                    </volist>
+                </select>
+                <span class="input-group-btn">
+                        <button class="btn btn-default" id="search_expert"  type="button">搜索</button>
+                    </span>
+            </div><!-- /input-group -->
+        </div><!-- /.col-lg-6 -->
+    </div>
+
+    <br/><br/><br/><br/>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">
+                该年度参评专家
+            </h3>
+        </div>
+        <div class="panel-body">
+            <empty name="expert_list1">
+                <span style="color: red;">暂无用户</span>
+                <else/>
+                <table class="table table-hover table-condensed table-bordered table_list">
+                    <thead>
+                    <tr class="active">
+                        <th width="10%">序号</th>
+                        <th width="10%">专家姓名</th>
+                        <th width="10%">评审一级指标</th>
+                        <th width="10%">操作</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <volist name="expert_list1" id="vo" key="k">
+                        <tr>
+                            <td align="center">{$k}</td>
+                            <td align="center">{$vo.nickname}</td>
+                            <td align="center">{$vo.indicator}</td>
+                            <td align="center">
+                                <button type="button" class="btn btn-sm btn-danger ajax_get confirm" url="{:U('Expert/remove', array('id'=>$vo['id']))}">删除</button>
+                            </td>
+                        </tr>
+                    </volist>
+
+            </empty>
+            </tbody>
+            </table>
+        </div>
+    </div>
+    <br/><br/>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">
+                该年度备选参评专家
+            </h3>
+        </div>
+        <div class="panel-body">
+            <empty name="expert_list2">
+                <span style="color: red;">暂无用户</span>
+                <else/>
+                <table class="table table-hover table-condensed table-bordered table_list">
+                    <thead>
+                    <tr class="active">
+                        <th width="10%">序号</th>
+                        <th width="10%">专家姓名</th>
+                        <th width="10%">评审一级指标</th>
+                        <th width="10%">操作</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <volist name="expert_list2" id="vo">
+                        <tr>
+                            <td align="center">{$vo.number}</td>
+                            <td align="center">{$vo.name}</td>
+                            <td align="center">{$vo.indicator}</td>
+                            <td align="center">
+                                <button type="button" class="btn btn-sm btn-danger ajax_get confirm" url="{:U('Expert/remove',array('id'=>$vo['id']))}">添加</button>
+                            </td>
+                        </tr>
+                    </volist>
+
+            </empty>
+            </tbody>
+            </table>
+        </div>
+    </div>
+</block>

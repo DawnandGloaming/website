@@ -1,0 +1,17 @@
+<extend name="Public:layer_base"/>
+<block name="body">
+    <form role="form" method="post" action="{:U('Group/create')}" class="create_page valid_form">
+        <div class="form-group">
+            <label>分组名称</label>
+            <input type="text" name="name" class="form-control" autocomplete="off" placeholder="请输入分组名称">
+        </div>
+        <div class="form-group">
+            <label>分组简介</label>
+            <textarea class="form-control" rows="3" name="intro" autocomplete="off" placeholder="请输入分组简介"></textarea>
+        </div>
+        <div class="form-group">
+            <label></label>
+            <button type="submit" class="btn btn-primary btn-block">保存</button>
+        </div>
+    </form>
+</block>

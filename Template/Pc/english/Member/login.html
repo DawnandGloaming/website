@@ -1,0 +1,26 @@
+<extend name="Public:base"/>
+<block name="body">
+    <div style="width: 300px;margin: auto;margin-top: 10%;">
+        <form class="form-horizontal valid_form" role="form" action="{:U('Member/login')}" method="post">
+            <div class="form-group">
+                <div style="text-align: center;margin: auto;font-size: 16px;color: #999999;">前台登录</div>
+            </div>
+            <div class="form-group">
+                <input type="text" name="nickname" class="form-control"placeholder="请输入用户名" autocomplete="off">
+            </div>
+            <div class="form-group">
+                <input type="password" name="password" class="form-control"placeholder="请输入密码">
+            </div>
+            <div class="form-group">
+                <input type="text" name="verify" class="form-control" id="verify" placeholder="请输入验证码" autocomplete="off">
+            </div>
+            <div class="form-group">
+                <img src="{:U('Public/verify')}" onclick='this.src=this.src+"?";' style="cursor:pointer;border: 1px solid #dcdcdc;border-radius: 5px;"/>
+                <button type="button" class="btn btn-default" style="width: 212px;height: 37px;" id="verify_img" onclick="var verify = $(this).closest('.form-group').find('img').attr('src');$(this).closest('.form-group').find('img').attr('src',verify+'?');">换一张</button>
+            </div>
+            <div class="form-group">
+                <button type="submit" id="submit" class="btn btn-default btn-block">注册</button>
+            </div>
+        </form>
+    </div>
+</block>

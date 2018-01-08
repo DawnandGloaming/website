@@ -1,0 +1,25 @@
+<extend name="Public:layer_base"/>
+<block name="body">
+    <form role="form" method="post" action="{:U('Expert/create')}" class="create_page valid_form">
+        <div class="form-group">
+            <label>专家姓名</label>
+            <input type="text" name="nickname" class="form-control" autocomplete="off" placeholder="请输入用户名">
+        </div>
+        <div class="form-group">
+            <label>评价一级指标</label>
+            <select name="indicator_id" class="form-control">
+                <volist name="indicator_list" id="vo">
+                    <option value="{$vo.id}">{$vo.name}</option>
+                </volist>
+            </select>
+        </div>
+        <div class="form-group">
+            <label>专家简介</label>
+            <textarea name="expert_desc" class="form-control" rows="3"></textarea>
+        </div>
+        <div class="form-group">
+            <label></label>
+            <button type="submit" class="btn btn-primary btn-block">保存</button>
+        </div>
+    </form>
+</block>

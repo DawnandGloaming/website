@@ -1,0 +1,44 @@
+<extend name="Public:base"/>
+<block name="body">
+    <ol class="breadcrumb admin_nav_bread">
+        <button type="button" class="btn btn-sm btn-success create_layer" url="{:U('Group/create')}" layer-w="450px;" layer-h="350px;">添加分组</button>
+    </ol>
+    <table class="table table-hover table-condensed table_list">
+        <thead>
+        <tr class="active">
+            <th width="25%">名称</th>
+            <th width="35%">简介</th>
+            <th width="15%">状态</th>
+            <th width="15%">操作</th>
+        </tr>
+        </thead>
+        <tbody>
+        <empty name="group_list">
+            <tr>
+                <td align="center" colspan="6">
+                    <span style="color: red;">暂无数据</span>
+                </td>
+            </tr>
+            <else/>
+            <volist name="group_list" id="vo">
+                <tr>
+                    <td align="center">{$vo.name}</td>
+                    <td align="center">{$vo.intro}</td>
+                    <td align="center">
+                        <if condition="$vo.status eq 1">
+                            <span class="ajax_get" url="{:U('change_status',array('type'=>'status','status'=>$vo['status'],'id'=>$vo['id']))}" style="color: green;cursor:pointer;">开启</span>
+                            <else/>
+                            <span class="ajax_get" url="{:U('change_status',array('type'=>'status','status'=>$vo['status'],'id'=>$vo['id']))}" style="color: red;cursor:pointer;">关闭</span>
+                        </if>
+                    </td>
+                    <td align="center">
+                        <button type="button" class="btn btn-sm btn-info create_layer" url="{:U('Group/editor',array('id'=>$vo['id']))}" layer-w="450px;" layer-h="350px;">修改</button>
+                        <a href="{:U('Group/give_rule',array('id'=>$vo['id']))}"><button type="button" class="btn btn-sm btn-default">授权</button></a>
+                        <button type="button" class="btn btn-sm btn-danger ajax_get confirm" url="{:U('Group/remove',array('id'=>$vo['id']))}">删除</button>
+                    </td>
+                </tr>
+            </volist>
+        </empty>
+        </tbody>
+    </table>
+</block>

@@ -1,0 +1,8 @@
+a:link{ text-decoration:none; }
+.admin_nav{margin-bottom: 0px;}
+.admin_nav_bread{margin-bottom: 0px;border-bottom: 1px solid #d4d4d4;}
+.create_page{margin:20px;}
+.table_list{margin-bottom: 0px;}
+.table_list thead tr th{text-align: center;}
+.table_list tbody tr td{vertical-align: middle;}
+.body{margin: 10px;border: 1px solid #d4d4d4;border-radius:5px;}

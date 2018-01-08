@@ -1,0 +1,40 @@
+<extend name="Public:base"/>
+<block name="body">
+    <ol class="breadcrumb admin_nav_bread">
+        <button type="button" class="btn btn-sm btn-success create_layer" url="{:U('Museum/create')}" layer-w="450px;" layer-h="670px;">添加用户</button>
+    </ol>
+    <table class="table table-hover table-condensed table-bordered table_list">
+        <thead>
+        <tr class="active">
+            <th width="10%">序号</th>
+            <th width="10%">博物馆名称</th>
+            <th width="10%">博物馆类型</th>
+            <th width="10%">博物馆级别</th>
+            <th width="50%">评审年份</th>
+            <th width="10%">操作</th>
+        </tr>
+        </thead>
+        <tbody>
+        <empty name="museum_list">
+            <tr>
+                <td align="center" colspan="6">
+                    <span style="color: red;">暂无用户</span>
+                </td>
+            </tr>
+            <else/>
+            <volist name="museum_list" id="vo" key="k">
+                <tr>
+                    <td align="center">{$k}</td>
+                    <td align="center">{$vo.name}</td>
+                    <td align="center">{$vo.type}</td>
+                    <td align="center">{$vo.level}</td>
+                    <td align="center">{$vo.year}</td>
+                    <td align="center">
+                        <button type="button" class="btn btn-sm btn-info create_layer" url="{:U('Admin/editor',array('id'=>$vo['id']))}" layer-w="450px;" layer-h="670px;">修改</button>
+                    </td>
+                </tr>
+            </volist>
+        </empty>
+        </tbody>
+    </table>
+</block>

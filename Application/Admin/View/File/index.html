@@ -1,0 +1,81 @@
+<extend name="Public:base"/>
+<block name="body">
+    <nav class="navbar navbar-default" role="navigation" style="margin-bottom: 0px;">
+        <div class="container-fluid">
+            <div>
+                <a href="{:U('Admin/File/index')}">
+                    <button type="button" class="btn btn-sm btn-success navbar-btn">主目录</button>
+                </a>
+                <a href="{:U('File/index',array('dir'=>$last_path))}">
+                    <button type="button" class="btn btn-sm btn-success navbar-btn">上级目录</button>
+                </a>
+                <a href="javascript:void(0);" style="text-decoration:none;">
+                    <button type="button" class="btn btn-sm btn-info navbar-btn">文件上传</button>
+                </a>
+                <a>
+                    <button type="button" class="btn btn-sm btn-info navbar-btn ajax_post confirm" target_form="file_form">批量打包</button>
+                </a>
+            </div>
+        </div>
+    </nav>
+	<form action="{:U('File/filehandle')}" method="post" class="file_form valid_form">
+		<table class="table table-hover table_list">
+			<thead>
+			<tr class="active">
+				<th width="5%" style="text-align: center;"><input type="button" name="checkall" checkfor="dir[]" value="全选" style="border: 1px solid #ddd;border-radius: 4px;font-weight: normal;"/></th>
+				<th width="15%" style="text-align: left;">名称</th>
+				<th width="20%" style="text-align: center;">创建时间</th>
+				<th width="20%" style="text-align: center;">修改时间</th>
+				<th width="10%" style="text-align: center;">文件大小</th>
+				<th width="20%" style="text-align: center;">操作</th>
+			</tr>
+			</thead>
+			<tbody>
+			<volist name="file_list" id="vo">
+				<tr>
+					<td align="center"><input type="checkbox" class="file_dir" name="dir[]" value="{$vo.path}"/></td>
+					<td align="left">
+						<if condition="$vo['type']">
+							<a href="{:U('File/editfile',array('dir'=>$vo['path']))}">
+								<span class="glyphicon glyphicon-file"> {$vo.name}</span>
+							</a>
+							<else/>
+							<a href="{:U('File/index',array('dir'=>$vo['path']))}">
+								<span class="glyphicon glyphicon-folder-open"> {$vo.name}</span>
+							</a>
+						</if>
+					</td>
+					<td align="center" title="{$vo.create_time}">{$vo.create_time}</td>
+					<td align="center" title="{$vo.update_time}">{$vo.update_time}</td>
+					<td align="center" title="{$vo.filesize}">{$vo.filesize}</td>
+					<td align="center">
+						<if condition="$vo['type']">
+							<a href="{:U('File/editfile',array('dir'=>$vo['path']))}">
+								<button type="button" class="btn btn-primary btn-xs">编辑</button>
+							</a>
+							<a href="{:U('File/delfile',array('dir'=>$vo['path']))}" class="ajax_get confirm">
+								<button type="button" class="btn btn-primary btn-xs">删除</button>
+							</a>
+							<a href="{:U('File/downfile',array('dir'=>$vo['path']))}">
+								<button type="button" class="btn btn-primary btn-xs">下载</button>
+							</a>
+							<if condition="$vo['ext'] eq 'zip' or $vo['ext'] eq 'gz'">
+								<a href="{:U('decompression',array('dir'=>$vo['path']))}" class="ajax_get confirm">
+									<button type="button" class="btn btn-primary btn-xs">解压</button>
+								</a>
+							</if>
+							<else/>
+							<a href="{:U('File/index',array('dir'=>$vo['path']))}">
+								<button type="button" class="btn btn-primary btn-xs">打开</button>
+							</a>
+							<a href="{:U('File/delfolder',array('dir'=>$vo['path']))}" class="ajax_get confirm">
+								<button type="button" class="btn btn-primary btn-xs">删除</button>
+							</a>
+						</if>
+					</td>
+				</tr>
+			</volist>
+			</tbody>
+		</table>
+	</form>
+</block>

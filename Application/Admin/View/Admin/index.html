@@ -1,0 +1,59 @@
+<extend name="Public:base"/>
+<block name="body">
+    <ol class="breadcrumb admin_nav_bread">
+        <button type="button" class="btn btn-sm btn-success create_layer" url="{:U('Admin/create')}" layer-w="450px;" layer-h="670px;">添加用户</button>
+    </ol>
+    <table class="table table-hover table-condensed table-bordered table_list">
+        <thead>
+        <tr class="active">
+            <th width="10%">用户名</th>
+            <th width="10%">所属权限组</th>
+            <th width="10%">真实姓名</th>
+            <th width="10%">手机</th>
+            <th width="15%">邮箱</th>
+            <th width="15%">最后登录时间</th>
+            <th width="15%">最后登录ip</th>
+            <th width="5%">状态</th>
+            <th width="10%">操作</th>
+        </tr>
+        </thead>
+        <tbody>
+        <empty name="admin_list">
+            <tr>
+                <td align="center" colspan="6">
+                    <span style="color: red;">暂无用户</span>
+                </td>
+            </tr>
+            <else/>
+            <volist name="admin_list" id="vo">
+                <tr>
+                    <td align="center">{$vo.nickname}</td>
+                    <td align="center">{$vo.group_name}</td>
+                    <td align="center">{$vo.truename}</td>
+                    <td align="center">{$vo.phone}</td>
+                    <td align="center">{$vo.email}</td>
+                    <td align="center">
+                        <empty name="vo.last_login_time">
+                            <span style="color: green;">暂未登录</span>
+                        <else/>
+                            {$vo.last_login_time|date="Y-m-d H:i:s",###}
+                        </empty>
+                    </td>
+                    <td align="center">{$vo.last_login_ip}</td>
+                    <td align="center">
+                        <if condition="$vo.status eq 1">
+                            <span class="ajax_get" url="{:U('change_status',array('type'=>'status','status'=>$vo['status'],'id'=>$vo['id']))}" style="color: green;cursor:pointer;">正常</span>
+                            <else/>
+                            <span class="ajax_get" url="{:U('change_status',array('type'=>'status','status'=>$vo['status'],'id'=>$vo['id']))}" style="color: red;cursor:pointer;">冻结</span>
+                        </if>
+                    </td>
+                    <td align="center">
+                        <button type="button" class="btn btn-sm btn-info create_layer" url="{:U('Admin/editor',array('id'=>$vo['id']))}" layer-w="450px;" layer-h="670px;">修改</button>
+                        <button type="button" class="btn btn-sm btn-danger ajax_get confirm" url="{:U('remove',array('id'=>$vo['id']))}">删除</button>
+                    </td>
+                </tr>
+            </volist>
+        </empty>
+        </tbody>
+    </table>
+</block>

@@ -1,0 +1,21 @@
+<extend name="Public:base"/>
+<block name="body">
+    <nav class="navbar navbar-default" role="navigation" style="margin-bottom: 0px;">
+        <div class="container-fluid">
+            <div>
+                <a href="{:U('Admin/File/index')}">
+                    <button type="button" class="btn btn-sm btn-success navbar-btn">主目录</button>
+                </a>
+                <a href="{:U('File/index',array('dir'=>$last_path))}">
+                    <button type="button" class="btn btn-sm btn-success navbar-btn">上级目录</button>
+                </a>
+                <div class="pull-right" style="line-height: 50px;">当前目录：{$now_path}</div>
+            </div>
+        </div>
+    </nav>
+	<form action="__SELF__" method="post" class="valid_form">
+		<textarea name="content" id="file_content" style="width: 100%;min-height: 500px;padding: 10px;">{$content}</textarea>
+        <hr>
+        <button type="submit" class="btn btn-primary btn-block">保存</button>
+	</form>
+</block>

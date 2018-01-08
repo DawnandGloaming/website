@@ -1,0 +1,24 @@
+<script>
+    KindEditor.ready(function(K) {
+        var editor_image = K.editor({
+            allowFileManager : true,
+            afterBlur: function () { this.sync(); },
+            uploadJson : "{:U('Admin/Upload/index')}",
+            fileManagerJson : "{:U('Admin/Upload/filelist')}"
+        });
+        //--上传图片
+        K('.upload_image').click(function() {
+            var urlinput=$(this).attr('for');
+            editor_image.loadPlugin('image', function() {
+                editor_image.plugin.imageDialog({
+                    showRemote : false,
+                    imageUrl : K('#'+urlinput).val(),
+                    clickFn : function(url, title, width, height, border, align) {
+                        K('#'+urlinput).val(url);
+                        editor_image.hideDialog();
+                    }
+                });
+            });
+        });
+    });
+</script>

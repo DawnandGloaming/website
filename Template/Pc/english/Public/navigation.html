@@ -1,0 +1,34 @@
+<nav class="navbar navbar-inverse admin_nav" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="{:U('Index/index')}">后台系统</a>
+        </div>
+        <div class="collapse navbar-collapse">
+            <empty name="nav">
+                <ul class="nav navbar-nav">
+                    <li class="dropdown">
+                        <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">
+                            权限管理<b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="{:U('Navigation/index')}">后台导航</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            <else/>
+                <volist name="nav" id="vo">
+                    <ul class="nav navbar-nav">
+                        <li class="dropdown">
+                            <a href="{$vo.url}" class="dropdown-toggle" data-toggle="dropdown">{$vo.name}<b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <volist name="vo['_child']" id="voo">
+                                    <li><a href="{:U($voo['url'])}">{$voo.name}</a></li>
+                                </volist>
+                            </ul>
+                        </li>
+                    </ul>
+                </volist>
+            </empty>
+        </div>
+    </div>
+</nav>
