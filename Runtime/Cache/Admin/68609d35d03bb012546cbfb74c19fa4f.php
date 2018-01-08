@@ -8,9 +8,12 @@
     <link href="/website/Public/Plugin/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 <link href="/website/Public/Plugin/validate/validate.css" rel="stylesheet">
 <link href="/website/Public/Admin/css/common.css" rel="stylesheet">
+
     <script src="/website/Public/Common/jquery.min.js"></script>
+<!--<script src="http://cdn.static.runoob.com/libs/jquery/1.10.2/jquery.min.js"></script>-->
 <script src="/website/Public/Plugin/bootstrap/js/bootstrap.min.js"></script>
 <script src="/website/Public/Admin/js/common.js"></script>
+
 </head>
 <body>
     <nav class="navbar navbar-inverse admin_nav" role="navigation">
@@ -67,78 +70,56 @@
 </ol>
     <div class="body">
         
-    <ol class="breadcrumb admin_nav_bread">
-        <button type="button" class="btn btn-sm btn-primary ajax_get" url="<?php echo U('Rule/get_all_rule');?>">更新规则</button>
-    </ol>
-    <table class="table table-hover table-condensed table_list">
-        <thead>
-        <tr class="active">
-            <th width="15%">名称</th>
-            <th width="10%">排序</th>
-            <th width="60%">规则</th>
-            <th width="15%">操作</th>
-        </tr>
-        </thead>
-        <tbody>
-        <?php if(empty($rule_list)): ?><tr>
-                <td align="center" colspan="6">
-                    <span style="color: red;">暂无规则</span>
-                </td>
-            </tr>
-        <?php else: ?>
-            <?php if(is_array($rule_list)): $i = 0; $__LIST__ = $rule_list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><tr class="tr_tree column_<?php echo ($vo["pid"]); ?> column_id_<?php echo ($vo["id"]); ?>" data-level="<?php echo ($vo['level']); ?>" data-id="<?php echo ($vo["id"]); ?>" data-pid="<?php echo ($vo["pid"]); ?>">
-                    <td align="left">
-                        <span class="glyphicon glyphicon-plus" aria-hidden="true" style="cursor: pointer;" onclick="handleTree($(this),'<?php echo ($vo["id"]); ?>')"></span>
-                        <span class="tree_img">&nbsp;&nbsp;<img src="/website/Public/Admin/images/bg_column.gif"></span><?php echo ($vo["name"]); ?>
-                    </td>
-                    <td align="center"><?php echo ($vo["sort"]); ?></td>
-                    <td align="center"><?php echo ($vo["rule"]); ?></td>
-                    <td align="center">
-                        <button type="button" class="btn btn-sm btn-danger ajax_get confirm" url="<?php echo U('Rule/remove',array('id'=>$vo['id']));?>">删除</button>
-                    </td>
-                </tr><?php endforeach; endif; else: echo "" ;endif; endif; ?>
-        </tbody>
-    </table>
-    <script type="text/javascript">
-        $(document).ready(function(){
-            $('.tr_tree').each(function(){
-                var glyphicon = $(this).find('.glyphicon');
-                var tree_img = $(this).find('.tree_img');
-                var tr_level = $(this).attr('data-level');
-                var id = $(this).attr('data-id');
-                nextobj=$(this).next('.column_'+id).attr('data-id');
-                if(tr_level != 1){
-                    $(this).hide();
-                    glyphicon.hide();
-                }else {
-                    tree_img.hide();
-                }
-            })
-        })
-        function handleTree(my,id,tp){
-            var son = $('.column_'+id);
-            if (son){
-                if (son.is(":hidden")){
-                    if(!tp){
-                        son.show();
-                        if(my.hasClass('glyphicon-plus')) {
-                            my.removeClass('glyphicon-plus').addClass('glyphicon-minus');
-                        }
-                    }
-                }else{
-                    son.hide();
-                    if(my.hasClass('glyphicon-minus')){
-                        my.removeClass('glyphicon-minus').addClass('glyphicon-plus');
-                    }
-                    son.each(function(){
-                        var sid = $(this).attr('id');
-                        var sson = $(this).find(".columnname");
-                        if (sid) oncolumn(sson,sid,1);
-                    })
-                }
-            }
-        }
-    </script>
+    <div class="top_text">
+        <span style="float: left; padding-top: 8px">请选择评审年份:</span>
+        <div class="col-lg-6 form-group" style="float: left">
+            <div class="input-group">
+                <select name="year_id" class="form-control">
+                    <?php if(is_array($year_list)): $i = 0; $__LIST__ = $year_list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><option value="<?php echo ($vo["id"]); ?>"><?php echo ($vo["name"]); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
+                </select>
+                <span class="input-group-btn">
+                        <button class="btn btn-default" id="search" url="<?php echo U('Museum/search');?>" type="button">搜索</button>
+                    </span>
+            </div><!-- /input-group -->
+        </div><!-- /.col-lg-6 -->
+    </div>
+
+    <br/><br/><br/><br/>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">
+                该年度参评博物馆
+            </h3>
+        </div>
+        <div class="panel-body">
+            <table class="table table-hover table-condensed table-bordered table_list">
+                <thead>
+                <tr class="active">
+                    <th width="10%">序号</th>
+                    <th width="30%">博物馆名称</th>
+                    <th width="30%">博物馆类型</th>
+                    <th width="30%">博物馆级别</th>
+                </tr>
+                </thead>
+                <tbody>
+                <?php if(empty($museum_list)): ?><tr>
+                        <td align="center" colspan="6">
+                            <span style="color: red;">暂无数据</span>
+                        </td>
+                    </tr>
+                    <?php else: ?>
+                    <?php if(is_array($museum_list)): $k = 0; $__LIST__ = $museum_list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($k % 2 );++$k;?><tr>
+                            <td align="center"><?php echo ($k); ?></td>
+                            <td align="center"><?php echo ($vo["name"]); ?></td>
+                            <td align="center"><?php echo ($vo["museum_type_id"]); ?></td>
+                            <td align="center"><?php echo ($vo["museum_level_id"]); ?></td>
+
+                        </tr><?php endforeach; endif; else: echo "" ;endif; endif; ?>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <br/><br/>
 
     </div>
     <script src="/website/Public/Plugin/validate/validform_v5.3.2.js"></script>
@@ -146,6 +127,7 @@
 <script src="/website/Public/Common/jquery.form.js"></script>
 <script src="/website/Public/Common/create_layer.js"></script>
 <script src="/website/Public/Common/jquery.submit.js"></script>
+<script src="/website/Public/Common/jquery.search.js"></script>
 <link href="/website/Public/Plugin/kindeditor/themes/default/default.css" rel="stylesheet"/>
 <script src="/website/Public/Plugin/kindeditor/kindeditor.js"></script>
 <script src="/website/Public/Plugin/kindeditor/lang/zh_CN.js"></script>

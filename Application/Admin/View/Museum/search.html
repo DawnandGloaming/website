@@ -1,0 +1,59 @@
+<extend name="Public:base"/>
+<block name="body">
+    <div class="top_text">
+        <span style="float: left; padding-top: 8px">请选择评审年份:</span>
+        <div class="col-lg-6 form-group" style="float: left">
+            <div class="input-group">
+                <select name="year_id" class="form-control">
+                    <volist name="year_list" id="vo">
+                        <option value="{$vo.id}">{$vo.name}</option>
+                    </volist>
+                </select>
+                <span class="input-group-btn">
+                        <button class="btn btn-default" id="search" url="{:U('Museum/search')}" type="button">搜索</button>
+                    </span>
+            </div><!-- /input-group -->
+        </div><!-- /.col-lg-6 -->
+    </div>
+
+    <br/><br/><br/><br/>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">
+                该年度参评博物馆
+            </h3>
+        </div>
+        <div class="panel-body">
+            <table class="table table-hover table-condensed table-bordered table_list">
+                <thead>
+                <tr class="active">
+                    <th width="10%">序号</th>
+                    <th width="30%">博物馆名称</th>
+                    <th width="30%">博物馆类型</th>
+                    <th width="30%">博物馆级别</th>
+                </tr>
+                </thead>
+                <tbody>
+                <empty name="museum_list">
+                    <tr>
+                        <td align="center" colspan="6">
+                            <span style="color: red;">暂无数据</span>
+                        </td>
+                    </tr>
+                    <else/>
+                    <volist name="museum_list" id="vo" key="k">
+                        <tr>
+                            <td align="center">{$k}</td>
+                            <td align="center">{$vo.name}</td>
+                            <td align="center">{$vo.museum_type_id}</td>
+                            <td align="center">{$vo.museum_level_id}</td>
+
+                        </tr>
+                    </volist>
+                </empty>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <br/><br/>
+</block>

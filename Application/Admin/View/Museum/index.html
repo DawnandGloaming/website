@@ -1,7 +1,7 @@
 <extend name="Public:base"/>
 <block name="body">
     <ol class="breadcrumb admin_nav_bread">
-        <button type="button" class="btn btn-sm btn-success create_layer" url="{:U('Museum/create')}" layer-w="450px;" layer-h="670px;">添加用户</button>
+        <button type="button" class="btn btn-sm btn-success create_layer" url="{:U('Museum/create')}" layer-w="450px;" layer-h="670px;">添加博物馆</button>
     </ol>
     <table class="table table-hover table-condensed table-bordered table_list">
         <thead>
@@ -26,8 +26,8 @@
                 <tr>
                     <td align="center">{$k}</td>
                     <td align="center">{$vo.name}</td>
-                    <td align="center">{$vo.type}</td>
-                    <td align="center">{$vo.level}</td>
+                    <td align="center">{$vo.museum_type}</td>
+                    <td align="center">{$vo.museum_level}</td>
                     <td align="center">{$vo.year}</td>
                     <td align="center">
                         <button type="button" class="btn btn-sm btn-info create_layer" url="{:U('Admin/editor',array('id'=>$vo['id']))}" layer-w="450px;" layer-h="670px;">修改</button>

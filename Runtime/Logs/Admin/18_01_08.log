@@ -1,51 +1,85 @@
-[ 2018-01-08T09:37:49+08:00 ] ::1 /website/admin/database/index.html
+[ 2018-01-08T19:50:28+08:00 ] ::1 /website/admin/clear/cache.html
 INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
-INFO: [ app_init ] --END-- [ RunTime:0.085804s ]
-
-[ 2018-01-08T09:38:00+08:00 ] ::1 /website/admin/database/index/Action/backup.html
-INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000046s ]
-INFO: [ app_init ] --END-- [ RunTime:0.000557s ]
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001500s ]
 INFO: [ app_begin ] --START--
-INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000798s ]
-INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001226s ]
-INFO: [ app_begin ] --END-- [ RunTime:0.002303s ]
-NOTIC: [2] Missing argument 1 for Common\Controller\CommonController::is_mobile(), called in D:\wamp\www\website\Application\Common\Controller\CommonController.class.php on line 14 and defined D:\wamp\www\website\Application\Common\Controller\CommonController.class.php 第 22 行.
-SQL: SHOW COLUMNS FROM `en_navigation` [ RunTime:0.0043s ]
-SQL: SELECT `id`,`pid`,`sort`,`name`,`url`,`is_show` FROM `en_navigation` WHERE `is_show` = 1  [ RunTime:0.0007s ]
-SQL: SHOW COLUMNS FROM `en_admin` [ RunTime:0.0046s ]
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000500s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001500s ]
+NOTIC: [2] Missing argument 1 for Common\Controller\CommonController::is_mobile(), called in D:\wamp64\www\website\Application\Common\Controller\CommonController.class.php on line 14 and defined D:\wamp64\www\website\Application\Common\Controller\CommonController.class.php 第 22 行.
+SQL: SHOW COLUMNS FROM `en_navigation` [ RunTime:0.0005s ]
+SQL: SELECT `id`,`pid`,`sort`,`name`,`url`,`is_show` FROM `en_navigation` WHERE `is_show` = 1  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `en_admin` [ RunTime:0.0005s ]
+SQL: SELECT `id`,`group_id`,`nickname`,`password`,`truename`,`phone`,`email`,`register_time`,`register_ip`,`last_login_time`,`last_login_ip`,`status` FROM `en_admin` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`sort`,`name`,`url`,`is_show` FROM `en_navigation` WHERE `is_show` = 1 AND `pid` <> 0  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: bread D:\wamp64\www\website\Application\Admin\Controller\BaseController.class.php 第 86 行.
+
+[ 2018-01-08T19:50:29+08:00 ] ::1 /website/admin/museum/showmuseumyearlist.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000500s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000500s ]
+
+[ 2018-01-08T19:50:30+08:00 ] ::1 /website/admin/museum/showmuseumyearlist.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000500s ]
+
+[ 2018-01-08T19:50:33+08:00 ] ::1 /website/admin/museum/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-01-08T19:50:35+08:00 ] ::1 /website/admin/museum/showmuseumyearlist.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000500s ]
+
+[ 2018-01-08T19:56:34+08:00 ] ::1 /website/admin/museum/search.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000500s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000500s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001500s ]
+NOTIC: [2] Missing argument 1 for Common\Controller\CommonController::is_mobile(), called in D:\wamp64\www\website\Application\Common\Controller\CommonController.class.php on line 14 and defined D:\wamp64\www\website\Application\Common\Controller\CommonController.class.php 第 22 行.
+SQL: SHOW COLUMNS FROM `en_navigation` [ RunTime:0.0005s ]
+SQL: SELECT `id`,`pid`,`sort`,`name`,`url`,`is_show` FROM `en_navigation` WHERE `is_show` = 1  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `en_admin` [ RunTime:0.0005s ]
 SQL: SELECT `id`,`group_id`,`nickname`,`password`,`truename`,`phone`,`email`,`register_time`,`register_ip`,`last_login_time`,`last_login_ip`,`status` FROM `en_admin` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0005s ]
-SQL: SELECT `id`,`pid`,`sort`,`name`,`url`,`is_show` FROM `en_navigation` WHERE `is_show` = 1 AND `pid` <> 0  [ RunTime:0.0004s ]
-NOTIC: [2] mkdir(): File exists D:\wamp\www\website\Application\Admin\Controller\DatabaseController.class.php 第 10 行.
-NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\website\Application\Common\Library\MySQLReback.class.php 第 18 行.
-NOTIC: [8192] Function mysql_list_tables() is deprecated D:\wamp\www\website\Application\Common\Library\MySQLReback.class.php 第 123 行.
-NOTIC: [8] Undefined variable: return D:\wamp\www\website\Application\Common\Library\MySQLReback.class.php 第 151 行.
+SQL: SELECT `id`,`pid`,`sort`,`name`,`url`,`is_show` FROM `en_navigation` WHERE `is_show` = 1 AND `pid` <> 0  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `en_museum` [ RunTime:0.0005s ]
+SQL: SELECT `id`,`name`,`museum_type_id`,`museum_level_id`,`year_id`,`museum_desc` FROM `en_museum`  [ RunTime:0.0005s ]
 
-[ 2018-01-08T09:38:01+08:00 ] ::1 /website/admin/database/index.html
+[ 2018-01-08T19:56:35+08:00 ] ::1 /website/admin/museum/showmuseumyearlist.html
 INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
-INFO: [ app_init ] --END-- [ RunTime:0.000537s ]
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000500s ]
 
-[ 2018-01-08T09:38:15+08:00 ] ::1 /website/admin/database/index/Action/Del/file/%D3%C3%BB%A7%CA%D6%B2%E1_%B9%FA%BC%D2%D2%BB%BC%B6%B2%A9%CE%EF%B9%DD%D4%CB%D0%D0%C6%C0%B9%C0%B9%DC%C0%ED%CF%B5%CD%B3.chm.html
+[ 2018-01-08T19:56:53+08:00 ] ::1 /website/admin/museum/search.html
 INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
-INFO: [ app_init ] --END-- [ RunTime:0.000578s ]
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000500s ]
 INFO: [ app_begin ] --START--
-INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000739s ]
-INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000960s ]
-INFO: [ app_begin ] --END-- [ RunTime:0.001976s ]
-NOTIC: [2] Missing argument 1 for Common\Controller\CommonController::is_mobile(), called in D:\wamp\www\website\Application\Common\Controller\CommonController.class.php on line 14 and defined D:\wamp\www\website\Application\Common\Controller\CommonController.class.php 第 22 行.
-SQL: SHOW COLUMNS FROM `en_navigation` [ RunTime:0.0048s ]
-SQL: SELECT `id`,`pid`,`sort`,`name`,`url`,`is_show` FROM `en_navigation` WHERE `is_show` = 1  [ RunTime:0.0006s ]
-SQL: SHOW COLUMNS FROM `en_admin` [ RunTime:0.0040s ]
-SQL: SELECT `id`,`group_id`,`nickname`,`password`,`truename`,`phone`,`email`,`register_time`,`register_ip`,`last_login_time`,`last_login_ip`,`status` FROM `en_admin` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0004s ]
-SQL: SELECT `id`,`pid`,`sort`,`name`,`url`,`is_show` FROM `en_navigation` WHERE `is_show` = 1 AND `pid` <> 0  [ RunTime:0.0004s ]
-NOTIC: [2] mkdir(): File exists D:\wamp\www\website\Application\Admin\Controller\DatabaseController.class.php 第 10 行.
-NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\website\Application\Common\Library\MySQLReback.class.php 第 18 行.
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000500s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001500s ]
+NOTIC: [2] Missing argument 1 for Common\Controller\CommonController::is_mobile(), called in D:\wamp64\www\website\Application\Common\Controller\CommonController.class.php on line 14 and defined D:\wamp64\www\website\Application\Common\Controller\CommonController.class.php 第 22 行.
+SQL: SHOW COLUMNS FROM `en_navigation` [ RunTime:0.0005s ]
+SQL: SELECT `id`,`pid`,`sort`,`name`,`url`,`is_show` FROM `en_navigation` WHERE `is_show` = 1  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `en_admin` [ RunTime:0.0005s ]
+SQL: SELECT `id`,`group_id`,`nickname`,`password`,`truename`,`phone`,`email`,`register_time`,`register_ip`,`last_login_time`,`last_login_ip`,`status` FROM `en_admin` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT `id`,`pid`,`sort`,`name`,`url`,`is_show` FROM `en_navigation` WHERE `is_show` = 1 AND `pid` <> 0  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `en_museum` [ RunTime:0.0000s ]
+SQL: SELECT `id`,`name`,`museum_type_id`,`museum_level_id`,`year_id`,`museum_desc` FROM `en_museum`  [ RunTime:0.0005s ]
 
-[ 2018-01-08T09:38:16+08:00 ] ::1 /website/admin/database/index.html
+[ 2018-01-08T19:56:54+08:00 ] ::1 /website/admin/museum/showmuseumyearlist.html
 INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
-INFO: [ app_init ] --END-- [ RunTime:0.000578s ]
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000500s ]
+
+[ 2018-01-08T19:56:56+08:00 ] ::1 /website/admin/museum/showmuseumyearlist.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000500s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 
