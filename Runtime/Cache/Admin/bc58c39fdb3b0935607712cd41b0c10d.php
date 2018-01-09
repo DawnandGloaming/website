@@ -71,34 +71,29 @@
     <div class="body">
         
     <ol class="breadcrumb admin_nav_bread">
-        <button type="button" class="btn btn-sm btn-success create_layer" url="<?php echo U('Museum/create');?>" layer-w="450px;" layer-h="670px;">添加博物馆</button>
+        <button type="button" class="btn btn-sm btn-success create_layer" url="<?php echo U('Expert/create');?>" layer-w="450px;" layer-h="670px;">添加专家</button>
     </ol>
     <table class="table table-hover table-condensed table-bordered table_list">
         <thead>
         <tr class="active">
-            <th width="10%">序号</th>
-            <th width="10%">博物馆名称</th>
-            <th width="10%">博物馆类型</th>
-            <th width="10%">博物馆级别</th>
-            <th width="50%">评审年份</th>
+            <th width="10%">专家姓名</th>
+            <th width="10%">一级指标</th>
             <th width="10%">操作</th>
         </tr>
         </thead>
         <tbody>
-        <?php if(empty($museum_list)): ?><tr>
-                <td align="center" colspan="6">
+        <?php if(empty($expert_list)): ?><tr>
+                <td align="center" colspan="3">
                     <span style="color: red;">暂无用户</span>
                 </td>
             </tr>
             <?php else: ?>
-            <?php if(is_array($museum_list)): $k = 0; $__LIST__ = $museum_list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($k % 2 );++$k;?><tr>
-                    <td align="center"><?php echo ($k); ?></td>
-                    <td align="center"><?php echo ($vo["name"]); ?></td>
-                    <td align="center"><?php echo ($vo["museum_type"]); ?></td>
-                    <td align="center"><?php echo ($vo["museum_level"]); ?></td>
-                    <td align="center"><?php echo ($vo["year"]); ?></td>
+            <?php if(is_array($expert_list)): $i = 0; $__LIST__ = $expert_list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><tr>
+                    <td align="center"><?php echo ($vo["nickname"]); ?></td>
+                    <td align="center"><?php echo ($vo["indicator_name"]); ?></td>
                     <td align="center">
-                        <button type="button" class="btn btn-sm btn-info create_layer" url="<?php echo U('Admin/editor',array('id'=>$vo['id']));?>" layer-w="450px;" layer-h="670px;">修改</button>
+                        <button type="button" class="btn btn-sm btn-info create_layer" url="<?php echo U('Expert/editor',array('id'=>$vo['id']));?>" layer-w="450px;" layer-h="670px;">修改</button>
+                        <button type="button" class="btn btn-sm btn-danger ajax_get confirm" url="<?php echo U('Expert/remove',array('id'=>$vo['id']));?>">删除</button>
                     </td>
                 </tr><?php endforeach; endif; else: echo "" ;endif; endif; ?>
         </tbody>

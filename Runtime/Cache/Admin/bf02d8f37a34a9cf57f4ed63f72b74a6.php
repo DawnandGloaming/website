@@ -78,7 +78,7 @@
                     <?php if(is_array($year_list)): $i = 0; $__LIST__ = $year_list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><option value="<?php echo ($vo["id"]); ?>"><?php echo ($vo["name"]); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
                 </select>
                 <span class="input-group-btn">
-                        <button class="btn btn-default" id="search" url="<?php echo U('Museum/search');?>" type="button">搜索</button>
+                        <button class="btn btn-default" url="<?php echo U('AssignExpert/search');?>" type="button">搜索</button>
                     </span>
             </div><!-- /input-group -->
         </div><!-- /.col-lg-6 -->
@@ -88,7 +88,7 @@
     <div class="panel panel-default">
         <div class="panel-heading">
             <h3 class="panel-title">
-                该年度参评博物馆
+                该年度参评专家
             </h3>
         </div>
         <div class="panel-body">
@@ -96,30 +96,64 @@
                 <thead>
                 <tr class="active">
                     <th width="10%">序号</th>
-                    <th width="30%">博物馆名称</th>
-                    <th width="30%">博物馆类型</th>
-                    <th width="30%">博物馆级别</th>
+                    <th width="10%">专家姓名</th>
+                    <th width="10%">一级指标</th>
+                    <th width="10%">操作</th>
                 </tr>
                 </thead>
                 <tbody>
-                <?php if(empty($museum_list)): ?><tr>
-                        <td align="center" colspan="6">
-                            <span style="color: red;">暂无数据</span>
+                <?php if(empty($expert_list1)): ?><tr>
+                        <td align="center" colspan="4">
+                            <span style="color: red;">暂无用户</span>
                         </td>
                     </tr>
                     <?php else: ?>
-                    <?php if(is_array($museum_list)): $k = 0; $__LIST__ = $museum_list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($k % 2 );++$k;?><tr>
+                    <?php if(is_array($expert_list1)): $k = 0; $__LIST__ = $expert_list1;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($k % 2 );++$k;?><tr>
                             <td align="center"><?php echo ($k); ?></td>
-                            <td align="center"><?php echo ($vo["name"]); ?></td>
-                            <td align="center"><?php echo ($vo["museum_type_id"]); ?></td>
-                            <td align="center"><?php echo ($vo["museum_level_id"]); ?></td>
-
+                            <td align="center"><?php echo ($vo["nickname"]); ?></td>
+                            <td align="center"><?php echo ($vo["indicator_name"]); ?></td>
+                            <td align="center">
+                                <button type="button" class="btn btn-sm btn-danger ajax_get confirm" url="<?php echo U('Expert/remove', array('id'=>$vo['id']));?>">删除</button>
+                            </td>
                         </tr><?php endforeach; endif; else: echo "" ;endif; endif; ?>
                 </tbody>
             </table>
         </div>
     </div>
     <br/><br/>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">
+                该年度备选参评专家
+            </h3>
+        </div>
+        <div class="panel-body">
+            <?php if(empty($expert_list2)): ?><td align="center" colspan="4">
+                    <span style="color: red;" >暂无用户</span>
+                </td>
+                <?php else: ?>
+                <table class="table table-hover table-condensed table-bordered table_list">
+                    <thead>
+                    <tr class="active">
+                        <th width="10%">序号</th>
+                        <th width="10%">专家姓名</th>
+                        <th width="10%">评审一级指标</th>
+                        <th width="10%">操作</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <?php if(is_array($expert_list2)): $k = 0; $__LIST__ = $expert_list2;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($k % 2 );++$k;?><tr>
+                            <td align="center"><?php echo ($k); ?></td>
+                            <td align="center"><?php echo ($vo["nickname"]); ?></td>
+                            <td align="center"><?php echo ($vo["indicator_name"]); ?></td>
+                            <td align="center">
+                                <button type="button" class="btn btn-sm btn-danger ajax_get confirm" url="<?php echo U('Expert/remove',array('id'=>$vo['id']));?>">添加</button>
+                            </td>
+                        </tr><?php endforeach; endif; else: echo "" ;endif; ?>
+                    </tbody>
+                </table><?php endif; ?>
+        </div>
+    </div>
 
     </div>
     <script src="/website/Public/Plugin/validate/validform_v5.3.2.js"></script>

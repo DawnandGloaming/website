@@ -6,6 +6,7 @@
  * Time: 0:32
  */
 namespace Admin\Controller;
+use Admin\Model\MuseumModel;
 use Think\Controller;
 use Admin\Model\YearModel;
 class MuseumController extends BaseController
@@ -61,28 +62,18 @@ class MuseumController extends BaseController
 
     public function showMuseumYearList()
     {
-        $yearModel = M('year');
-        $year_list = $yearModel->field(true)->select();
-        $this->year_list = $year_list;
-        cookie('__forward__',$_SERVER['REQUEST_URI']);
-        $this->display('Museum/search');
+            $yearModel = M('year');
+            $year_list = $yearModel->field(true)->select();
+            $this->year_list = $year_list;
+            cookie('__forward__', $_SERVER['REQUEST_URI']);
+            $this->display();
     }
 
     public function search()
     {
+        $museumModel = new MuseumModel;
         $year_id = I('post.year_id', '');
-        $jumpUrl = I('post.url', '');
-        $museumModel = M('museum');
-        $museum_list = $museumModel->field(true)->select();
-        $museum_list_search = [];
-        foreach ($museum_list as $k => $v) {
-            if(in_array($year_id, unserialize($v['year_id']))) {
-                $museum_list_search[] = $museum_list[$k];
-            }
-        }
-        $this->museum_list = $museum_list;
-//        var_dump($museum_list_search);
-        $this->success($jumpUrl, cookie('__forward__'));
-
+        $search_result = $museumModel->getSearchResult($year_id);
+        $this->ajaxReturn($search_result,'json');
     }
 }

@@ -10,7 +10,7 @@
                     </volist>
                 </select>
                 <span class="input-group-btn">
-                        <button class="btn btn-default" id="search" url="{:U('Museum/search')}" type="button">搜索</button>
+                        <button class="btn btn-default museum_search" url="{:U('Museum/search')}" type="button">搜索</button>
                     </span>
             </div><!-- /input-group -->
         </div><!-- /.col-lg-6 -->
@@ -33,7 +33,7 @@
                     <th width="30%">博物馆级别</th>
                 </tr>
                 </thead>
-                <tbody>
+                <tbody id="search_result">
                 <empty name="museum_list">
                     <tr>
                         <td align="center" colspan="6">

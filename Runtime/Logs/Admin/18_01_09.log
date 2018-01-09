@@ -1,0 +1,566 @@
+[ 2018-01-09T19:15:29+08:00 ] ::1 /website/admin/clear/cache.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000500s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000500s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000500s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001500s ]
+NOTIC: [2] Missing argument 1 for Common\Controller\CommonController::is_mobile(), called in D:\wamp64\www\website\Application\Common\Controller\CommonController.class.php on line 14 and defined D:\wamp64\www\website\Application\Common\Controller\CommonController.class.php 第 22 行.
+SQL: SHOW COLUMNS FROM `en_navigation` [ RunTime:0.0005s ]
+SQL: SELECT `id`,`pid`,`sort`,`name`,`url`,`is_show` FROM `en_navigation` WHERE `is_show` = 1  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `en_admin` [ RunTime:0.0005s ]
+SQL: SELECT `id`,`group_id`,`nickname`,`password`,`truename`,`phone`,`email`,`register_time`,`register_ip`,`last_login_time`,`last_login_ip`,`status` FROM `en_admin` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT `id`,`pid`,`sort`,`name`,`url`,`is_show` FROM `en_navigation` WHERE `is_show` = 1 AND `pid` <> 0  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: bread D:\wamp64\www\website\Application\Admin\Controller\BaseController.class.php 第 86 行.
+
+[ 2018-01-09T19:15:30+08:00 ] ::1 /website/admin/assign_expert/search.html?year_id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000500s ]
+
+[ 2018-01-09T19:15:31+08:00 ] ::1 /website/admin/assign_expert/search.html?year_id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000500s ]
+
+[ 2018-01-09T19:16:05+08:00 ] ::1 /website/admin/museum/showmuseumyearlist.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-01-09T19:16:08+08:00 ] ::1 /website/admin/museum/search.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000500s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000500s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001500s ]
+NOTIC: [2] Missing argument 1 for Common\Controller\CommonController::is_mobile(), called in D:\wamp64\www\website\Application\Common\Controller\CommonController.class.php on line 14 and defined D:\wamp64\www\website\Application\Common\Controller\CommonController.class.php 第 22 行.
+SQL: SHOW COLUMNS FROM `en_navigation` [ RunTime:0.0005s ]
+SQL: SELECT `id`,`pid`,`sort`,`name`,`url`,`is_show` FROM `en_navigation` WHERE `is_show` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `en_admin` [ RunTime:0.0005s ]
+SQL: SELECT `id`,`group_id`,`nickname`,`password`,`truename`,`phone`,`email`,`register_time`,`register_ip`,`last_login_time`,`last_login_ip`,`status` FROM `en_admin` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`sort`,`name`,`url`,`is_show` FROM `en_navigation` WHERE `is_show` = 1 AND `pid` <> 0  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `en_museum` [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `en_museum_type` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `en_museum_level` [ RunTime:0.0005s ]
+SQL: SELECT `id`,`name`,`museum_type_id`,`museum_level_id`,`year_id`,`museum_desc` FROM `en_museum`  [ RunTime:0.0000s ]
+SQL: SELECT `name` FROM `en_museum_type` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT `name` FROM `en_museum_level` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `name` FROM `en_museum_type` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT `name` FROM `en_museum_level` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2018-01-09T19:16:13+08:00 ] ::1 /website/admin/assign_expert/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000500s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-01-09T19:16:14+08:00 ] ::1 /website/admin/assign_expert/search.html?year_id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000500s ]
+
+[ 2018-01-09T19:16:38+08:00 ] ::1 /website/admin/assign_expert/search.html?year_id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000500s ]
+
+[ 2018-01-09T19:16:42+08:00 ] ::1 /website/admin/assign_expert/search.html?year_id=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000500s ]
+
+[ 2018-01-09T19:17:07+08:00 ] ::1 /website/admin/assign_expert/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000500s ]
+
+[ 2018-01-09T19:17:09+08:00 ] ::1 /website/admin/assign_expert/search.html?year_id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-01-09T19:17:45+08:00 ] ::1 /website/admin/assign_expert/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-01-09T19:17:46+08:00 ] ::1 /website/admin/assign_expert/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000500s ]
+
+[ 2018-01-09T19:17:46+08:00 ] ::1 /website/admin/assign_expert/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-01-09T19:17:48+08:00 ] ::1 /website/admin/assign_expert/search.html?year_id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000500s ]
+
+[ 2018-01-09T19:18:16+08:00 ] ::1 /website/admin/assign_expert/search.html?year_id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000500s ]
+
+[ 2018-01-09T19:18:20+08:00 ] ::1 /website/admin/assign_expert/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000500s ]
+
+[ 2018-01-09T19:19:07+08:00 ] ::1 /website/admin/assign_expert/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-01-09T19:19:08+08:00 ] ::1 /website/admin/assign_expert/search.html?year_id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000500s ]
+
+[ 2018-01-09T19:19:34+08:00 ] ::1 /website/admin/assign_expert/search.html?year_id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-01-09T19:19:34+08:00 ] ::1 /website/admin/assign_expert/search.html?year_id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000500s ]
+
+[ 2018-01-09T19:19:39+08:00 ] ::1 /website/admin/assign_expert/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-01-09T19:19:41+08:00 ] ::1 /website/admin/assign_expert/search.html?year_id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000500s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000500s ]
+
+[ 2018-01-09T19:20:26+08:00 ] ::1 /website/admin/assign_expert/search.html?year_id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000500s ]
+
+[ 2018-01-09T19:20:38+08:00 ] ::1 /website/admin/assign_expert/search.html?year_id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000500s ]
+
+[ 2018-01-09T19:20:46+08:00 ] ::1 /website/admin/assign_expert/search.html?year_id=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000500s ]
+
+[ 2018-01-09T19:20:48+08:00 ] ::1 /website/admin/assign_expert/search.html?year_id=3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000500s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000500s ]
+
+[ 2018-01-09T19:20:50+08:00 ] ::1 /website/admin/assign_expert/search.html?year_id=4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000500s ]
+
+[ 2018-01-09T19:22:00+08:00 ] ::1 /website/admin/assign_expert/search.html?year_id=4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000500s ]
+
+[ 2018-01-09T19:22:03+08:00 ] ::1 /website/admin/assign_expert/search.html?year_id=4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000500s ]
+
+[ 2018-01-09T19:22:03+08:00 ] ::1 /website/admin/assign_expert/search.html?year_id=4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-01-09T19:22:04+08:00 ] ::1 /website/admin/assign_expert/search.html?year_id=4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000500s ]
+
+[ 2018-01-09T19:22:06+08:00 ] ::1 /website/admin/assign_expert/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000500s ]
+
+[ 2018-01-09T19:22:09+08:00 ] ::1 /website/admin/assign_expert/search.html?year_id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000500s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000500s ]
+
+[ 2018-01-09T19:22:35+08:00 ] ::1 /website/admin/assign_expert/search.html?year_id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-01-09T19:22:36+08:00 ] ::1 /website/admin/assign_expert/search.html?year_id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000500s ]
+
+[ 2018-01-09T19:22:40+08:00 ] ::1 /website/admin/assign_expert/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000500s ]
+
+[ 2018-01-09T19:22:41+08:00 ] ::1 /website/admin/assign_expert/search.html?year_id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000500s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-01-09T19:46:17+08:00 ] ::1 /website/admin/assign_expert/search.html?year_id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000500s ]
+
+[ 2018-01-09T19:47:11+08:00 ] ::1 /website/admin/assign_expert/search.html?year_id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-01-09T19:48:50+08:00 ] ::1 /website/admin/assign_expert/search.html?year_id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000500s ]
+
+[ 2018-01-09T19:48:55+08:00 ] ::1 /website/admin/assign_expert/create/id/4/year_id/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000500s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000500s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2] Missing argument 1 for Common\Controller\CommonController::is_mobile(), called in D:\wamp64\www\website\Application\Common\Controller\CommonController.class.php on line 14 and defined D:\wamp64\www\website\Application\Common\Controller\CommonController.class.php 第 22 行.
+SQL: SHOW COLUMNS FROM `en_navigation` [ RunTime:0.0005s ]
+SQL: SELECT `id`,`pid`,`sort`,`name`,`url`,`is_show` FROM `en_navigation` WHERE `is_show` = 1  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `en_admin` [ RunTime:0.0000s ]
+SQL: SELECT `id`,`group_id`,`nickname`,`password`,`truename`,`phone`,`email`,`register_time`,`register_ip`,`last_login_time`,`last_login_ip`,`status` FROM `en_admin` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT `id`,`pid`,`sort`,`name`,`url`,`is_show` FROM `en_navigation` WHERE `is_show` = 1 AND `pid` <> 0  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000500s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-01-09T19:49:13+08:00 ] ::1 /website/admin/assign_expert/search.html?year_id=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-01-09T19:49:20+08:00 ] ::1 /website/admin/assign_expert/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000500s ]
+
+[ 2018-01-09T19:49:23+08:00 ] ::1 /website/admin/assign_expert/search.html?year_id=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000500s ]
+
+[ 2018-01-09T19:49:26+08:00 ] ::1 /website/admin/assign_expert/create/id/4/year_id/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000500s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: [2] Missing argument 1 for Common\Controller\CommonController::is_mobile(), called in D:\wamp64\www\website\Application\Common\Controller\CommonController.class.php on line 14 and defined D:\wamp64\www\website\Application\Common\Controller\CommonController.class.php 第 22 行.
+SQL: SHOW COLUMNS FROM `en_navigation` [ RunTime:0.0005s ]
+SQL: SELECT `id`,`pid`,`sort`,`name`,`url`,`is_show` FROM `en_navigation` WHERE `is_show` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `en_admin` [ RunTime:0.0010s ]
+SQL: SELECT `id`,`group_id`,`nickname`,`password`,`truename`,`phone`,`email`,`register_time`,`register_ip`,`last_login_time`,`last_login_ip`,`status` FROM `en_admin` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT `id`,`pid`,`sort`,`name`,`url`,`is_show` FROM `en_navigation` WHERE `is_show` = 1 AND `pid` <> 0  [ RunTime:0.0005s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001500s ]
+
+[ 2018-01-09T19:50:48+08:00 ] ::1 /website/admin/assign_expert/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000500s ]
+
+[ 2018-01-09T19:50:51+08:00 ] ::1 /website/admin/assign_expert/search.html?year_id=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000500s ]
+
+[ 2018-01-09T19:50:54+08:00 ] ::1 /website/admin/assign_expert/create/id/4/year_id/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000500s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000500s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2] Missing argument 1 for Common\Controller\CommonController::is_mobile(), called in D:\wamp64\www\website\Application\Common\Controller\CommonController.class.php on line 14 and defined D:\wamp64\www\website\Application\Common\Controller\CommonController.class.php 第 22 行.
+SQL: SHOW COLUMNS FROM `en_navigation` [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`sort`,`name`,`url`,`is_show` FROM `en_navigation` WHERE `is_show` = 1  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `en_admin` [ RunTime:0.0010s ]
+SQL: SELECT `id`,`group_id`,`nickname`,`password`,`truename`,`phone`,`email`,`register_time`,`register_ip`,`last_login_time`,`last_login_ip`,`status` FROM `en_admin` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT `id`,`pid`,`sort`,`name`,`url`,`is_show` FROM `en_navigation` WHERE `is_show` = 1 AND `pid` <> 0  [ RunTime:0.0005s ]
+
+[ 2018-01-09T19:50:55+08:00 ] ::1 /website/admin/assign_expert/search.html?year_id=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-01-09T20:36:05+08:00 ] ::1 /website/admin/assign_expert/search.html?year_id=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000500s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-01-09T20:36:08+08:00 ] ::1 /website/admin/assign_expert/search.html?year_id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000500s ]
+
+[ 2018-01-09T20:36:11+08:00 ] ::1 /website/admin/assign_expert/create/id/4/year_id/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000500s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000500s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001500s ]
+NOTIC: [2] Missing argument 1 for Common\Controller\CommonController::is_mobile(), called in D:\wamp64\www\website\Application\Common\Controller\CommonController.class.php on line 14 and defined D:\wamp64\www\website\Application\Common\Controller\CommonController.class.php 第 22 行.
+SQL: SHOW COLUMNS FROM `en_navigation` [ RunTime:0.0005s ]
+SQL: SELECT `id`,`pid`,`sort`,`name`,`url`,`is_show` FROM `en_navigation` WHERE `is_show` = 1  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `en_admin` [ RunTime:0.0005s ]
+SQL: SELECT `id`,`group_id`,`nickname`,`password`,`truename`,`phone`,`email`,`register_time`,`register_ip`,`last_login_time`,`last_login_ip`,`status` FROM `en_admin` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`sort`,`name`,`url`,`is_show` FROM `en_navigation` WHERE `is_show` = 1 AND `pid` <> 0  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `en_expert` [ RunTime:0.0005s ]
+NOTIC: [8] Use of undefined constant intval - assumed 'intval' D:\wamp64\www\website\Application\Admin\Controller\AssignExpertController.class.php 第 39 行.
+SQL: SELECT * FROM `en_expert` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0005s ]
+NOTIC: [2] array_push() expects parameter 1 to be array, boolean given D:\wamp64\www\website\Application\Admin\Model\ExpertModel.class.php 第 50 行.
+NOTIC: [8] Undefined index: validate D:\wamp64\www\website\ThinkPHP\Library\Think\Model.class.php 第 1308 行.
+NOTIC: [8] Undefined index: auto D:\wamp64\www\website\ThinkPHP\Library\Think\Model.class.php 第 1538 行.
+SQL: UPDATE `en_expert` SET `nickname`='专家11',`indicator_id`='1',`expert_desc`='123',`year_id`='b:0;' WHERE `id` = 4 [ RunTime:0.0005s ]
+
+[ 2018-01-09T20:36:12+08:00 ] ::1 /website/admin/assign_expert/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000500s ]
+
+[ 2018-01-09T20:36:15+08:00 ] ::1 /website/admin/assign_expert/search.html?year_id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000500s ]
+
+[ 2018-01-09T20:36:21+08:00 ] ::1 /website/admin/assign_expert/search.html?year_id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000500s ]
+
+[ 2018-01-09T20:36:24+08:00 ] ::1 /website/admin/assign_expert/search.html?year_id=3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000500s ]
+
+[ 2018-01-09T20:43:15+08:00 ] ::1 /website/admin/assign_expert/create/id/4/year_id/3.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000500s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: [2] Missing argument 1 for Common\Controller\CommonController::is_mobile(), called in D:\wamp64\www\website\Application\Common\Controller\CommonController.class.php on line 14 and defined D:\wamp64\www\website\Application\Common\Controller\CommonController.class.php 第 22 行.
+SQL: SHOW COLUMNS FROM `en_navigation` [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`sort`,`name`,`url`,`is_show` FROM `en_navigation` WHERE `is_show` = 1  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `en_admin` [ RunTime:0.0010s ]
+SQL: SELECT `id`,`group_id`,`nickname`,`password`,`truename`,`phone`,`email`,`register_time`,`register_ip`,`last_login_time`,`last_login_ip`,`status` FROM `en_admin` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`sort`,`name`,`url`,`is_show` FROM `en_navigation` WHERE `is_show` = 1 AND `pid` <> 0  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `en_expert` [ RunTime:0.0005s ]
+NOTIC: [8] Use of undefined constant intval - assumed 'intval' D:\wamp64\www\website\Application\Admin\Controller\AssignExpertController.class.php 第 39 行.
+SQL: SELECT * FROM `en_expert` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0005s ]
+NOTIC: [2] array_push() expects parameter 1 to be array, boolean given D:\wamp64\www\website\Application\Admin\Model\ExpertModel.class.php 第 50 行.
+NOTIC: [8] Undefined index: validate D:\wamp64\www\website\ThinkPHP\Library\Think\Model.class.php 第 1308 行.
+NOTIC: [8] Undefined index: auto D:\wamp64\www\website\ThinkPHP\Library\Think\Model.class.php 第 1538 行.
+SQL: UPDATE `en_expert` SET `nickname`='专家11',`indicator_id`='1',`expert_desc`='123',`year_id`='b:0;' WHERE `id` = 4 [ RunTime:0.0000s ]
+
+[ 2018-01-09T20:43:16+08:00 ] ::1 /website/admin/assign_expert/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000500s ]
+
+[ 2018-01-09T20:43:40+08:00 ] ::1 /website/admin/assign_expert/search.html?year_id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000500s ]
+
+[ 2018-01-09T20:45:18+08:00 ] ::1 /website/admin/assign_expert/search.html?year_id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-01-09T20:45:24+08:00 ] ::1 /website/admin/assign_expert/search.html?year_id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-01-09T20:45:27+08:00 ] ::1 /website/admin/assign_expert/search.html?year_id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000500s ]
+
+[ 2018-01-09T20:45:30+08:00 ] ::1 /website/admin/assign_expert/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000500s ]
+
+[ 2018-01-09T20:45:31+08:00 ] ::1 /website/admin/assign_expert/search.html?year_id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000500s ]
+
+[ 2018-01-09T20:45:33+08:00 ] ::1 /website/admin/assign_expert/create/id/4/year_id/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000500s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000500s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001500s ]
+NOTIC: [2] Missing argument 1 for Common\Controller\CommonController::is_mobile(), called in D:\wamp64\www\website\Application\Common\Controller\CommonController.class.php on line 14 and defined D:\wamp64\www\website\Application\Common\Controller\CommonController.class.php 第 22 行.
+SQL: SHOW COLUMNS FROM `en_navigation` [ RunTime:0.0005s ]
+SQL: SELECT `id`,`pid`,`sort`,`name`,`url`,`is_show` FROM `en_navigation` WHERE `is_show` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `en_admin` [ RunTime:0.0005s ]
+SQL: SELECT `id`,`group_id`,`nickname`,`password`,`truename`,`phone`,`email`,`register_time`,`register_ip`,`last_login_time`,`last_login_ip`,`status` FROM `en_admin` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT `id`,`pid`,`sort`,`name`,`url`,`is_show` FROM `en_navigation` WHERE `is_show` = 1 AND `pid` <> 0  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `en_expert` [ RunTime:0.0005s ]
+NOTIC: [8] Use of undefined constant intval - assumed 'intval' D:\wamp64\www\website\Application\Admin\Controller\AssignExpertController.class.php 第 39 行.
+SQL: SELECT * FROM `en_expert` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0005s ]
+NOTIC: [8] Undefined index: validate D:\wamp64\www\website\ThinkPHP\Library\Think\Model.class.php 第 1308 行.
+NOTIC: [8] Undefined index: auto D:\wamp64\www\website\ThinkPHP\Library\Think\Model.class.php 第 1538 行.
+SQL: UPDATE `en_expert` SET `nickname`='专家11',`indicator_id`='1',`expert_desc`='123',`year_id`='a:1:{i:0;s:1:\"1\";}' WHERE `id` = 4 [ RunTime:0.0000s ]
+
+[ 2018-01-09T20:45:34+08:00 ] ::1 /website/admin/assign_expert/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000500s ]
+
+[ 2018-01-09T20:45:55+08:00 ] ::1 /website/admin/assign_expert/search.html?year_id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-01-09T20:46:54+08:00 ] ::1 /website/admin/expert/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000500s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-01-09T20:46:55+08:00 ] ::1 /website/admin/expert/create.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000500s ]
+
+[ 2018-01-09T20:47:03+08:00 ] ::1 /website/admin/expert/create.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000500s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000500s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001500s ]
+NOTIC: [2] Missing argument 1 for Common\Controller\CommonController::is_mobile(), called in D:\wamp64\www\website\Application\Common\Controller\CommonController.class.php on line 14 and defined D:\wamp64\www\website\Application\Common\Controller\CommonController.class.php 第 22 行.
+SQL: SHOW COLUMNS FROM `en_navigation` [ RunTime:0.0005s ]
+SQL: SELECT `id`,`pid`,`sort`,`name`,`url`,`is_show` FROM `en_navigation` WHERE `is_show` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `en_admin` [ RunTime:0.0010s ]
+SQL: SELECT `id`,`group_id`,`nickname`,`password`,`truename`,`phone`,`email`,`register_time`,`register_ip`,`last_login_time`,`last_login_ip`,`status` FROM `en_admin` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT `id`,`pid`,`sort`,`name`,`url`,`is_show` FROM `en_navigation` WHERE `is_show` = 1 AND `pid` <> 0  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `en_indicator` [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `en_expert` [ RunTime:0.0005s ]
+NOTIC: [8] Undefined index: validate D:\wamp64\www\website\ThinkPHP\Library\Think\Model.class.php 第 1308 行.
+NOTIC: [8] Undefined index: auto D:\wamp64\www\website\ThinkPHP\Library\Think\Model.class.php 第 1538 行.
+SQL: INSERT INTO `en_expert` (`nickname`,`indicator_id`,`expert_desc`) VALUES ('专家13','1','231321') [ RunTime:0.0005s ]
+
+[ 2018-01-09T20:47:04+08:00 ] ::1 /website/admin/expert/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000500s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000500s ]
+
+[ 2018-01-09T20:47:07+08:00 ] ::1 /website/admin/expert/create.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000500s ]
+
+[ 2018-01-09T20:47:14+08:00 ] ::1 /website/admin/expert/create.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000500s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2] Missing argument 1 for Common\Controller\CommonController::is_mobile(), called in D:\wamp64\www\website\Application\Common\Controller\CommonController.class.php on line 14 and defined D:\wamp64\www\website\Application\Common\Controller\CommonController.class.php 第 22 行.
+SQL: SHOW COLUMNS FROM `en_navigation` [ RunTime:0.0005s ]
+SQL: SELECT `id`,`pid`,`sort`,`name`,`url`,`is_show` FROM `en_navigation` WHERE `is_show` = 1  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `en_admin` [ RunTime:0.0010s ]
+SQL: SELECT `id`,`group_id`,`nickname`,`password`,`truename`,`phone`,`email`,`register_time`,`register_ip`,`last_login_time`,`last_login_ip`,`status` FROM `en_admin` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT `id`,`pid`,`sort`,`name`,`url`,`is_show` FROM `en_navigation` WHERE `is_show` = 1 AND `pid` <> 0  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `en_indicator` [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `en_expert` [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: validate D:\wamp64\www\website\ThinkPHP\Library\Think\Model.class.php 第 1308 行.
+NOTIC: [8] Undefined index: auto D:\wamp64\www\website\ThinkPHP\Library\Think\Model.class.php 第 1538 行.
+SQL: INSERT INTO `en_expert` (`nickname`,`indicator_id`,`expert_desc`) VALUES ('专家14','2','1212121') [ RunTime:0.0005s ]
+
+[ 2018-01-09T20:47:16+08:00 ] ::1 /website/admin/expert/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-01-09T20:47:19+08:00 ] ::1 /website/admin/assign_expert/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-01-09T20:47:20+08:00 ] ::1 /website/admin/assign_expert/search.html?year_id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-01-09T20:50:02+08:00 ] ::1 /website/admin/assign_expert/search.html?year_id=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000500s ]
+
+[ 2018-01-09T20:50:06+08:00 ] ::1 /website/admin/assign_expert/create/id/7/year_id/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000500s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000500s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001500s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2] Missing argument 1 for Common\Controller\CommonController::is_mobile(), called in D:\wamp64\www\website\Application\Common\Controller\CommonController.class.php on line 14 and defined D:\wamp64\www\website\Application\Common\Controller\CommonController.class.php 第 22 行.
+SQL: SHOW COLUMNS FROM `en_navigation` [ RunTime:0.0005s ]
+SQL: SELECT `id`,`pid`,`sort`,`name`,`url`,`is_show` FROM `en_navigation` WHERE `is_show` = 1  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `en_admin` [ RunTime:0.0010s ]
+SQL: SELECT `id`,`group_id`,`nickname`,`password`,`truename`,`phone`,`email`,`register_time`,`register_ip`,`last_login_time`,`last_login_ip`,`status` FROM `en_admin` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT `id`,`pid`,`sort`,`name`,`url`,`is_show` FROM `en_navigation` WHERE `is_show` = 1 AND `pid` <> 0  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `en_expert` [ RunTime:0.0005s ]
+NOTIC: [8] Use of undefined constant intval - assumed 'intval' D:\wamp64\www\website\Application\Admin\Controller\AssignExpertController.class.php 第 39 行.
+SQL: SELECT * FROM `en_expert` WHERE `id` = 7 LIMIT 1   [ RunTime:0.0005s ]
+NOTIC: [8] Undefined index: validate D:\wamp64\www\website\ThinkPHP\Library\Think\Model.class.php 第 1308 行.
+NOTIC: [8] Undefined index: auto D:\wamp64\www\website\ThinkPHP\Library\Think\Model.class.php 第 1538 行.
+SQL: UPDATE `en_expert` SET `nickname`='专家12',`indicator_id`='2',`expert_desc`='',`year_id`='a:1:{i:0;s:1:\"2\";}' WHERE `id` = 7 [ RunTime:0.0005s ]
+
+[ 2018-01-09T20:50:07+08:00 ] ::1 /website/admin/assign_expert/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000500s ]
+
+[ 2018-01-09T20:50:14+08:00 ] ::1 /website/admin/assign_expert/search.html?year_id=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000500s ]
+
