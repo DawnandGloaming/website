@@ -45,6 +45,12 @@ class AssignExpertController extends BaseController
 
     public function remove()
     {
-
+        $expertModel = new ExpertModel;
+        $year_id = I('get.year_id', '');
+        $id = I('get.id', '', intval);
+        if(!$expertModel->removeAnnualExpert($id, $year_id)) {
+            $this->error('删除失败');
+        }
+        $this->success('删除成功', cookie('__forward__'));
     }
 }
