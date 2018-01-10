@@ -1,0 +1,30 @@
+<extend name="Public:layer_base"/>
+<block name="body">
+    <form role="form" method="post" action="{:U('Museum/editor')}" class="create_page valid_form">
+        <div class="form-group">
+            <label>博物馆名称</label>
+            <input type="text" name="name" value="{$museum_info['name']}" class="form-control" autocomplete="off" placeholder="请输入名称">
+        </div>
+        <div class="form-group">
+            <label>博物馆类型</label>
+            <select name="museum_type_id" class="form-control">
+                <volist name="museum_type_list" id="vo">
+                    <option value="{$vo.id}" <if condition="$museum_info['museum_type_id'] eq $vo['id']">selected</if>>{$vo.name}</option>
+                </volist>
+            </select>
+        </div>
+        <div class="form-group">
+            <label>博物馆级别</label>
+            <select name="museum_level_id" class="form-control">
+                <volist name="museum_level_list" id="vo">
+                    <option value="{$vo.id}" <if condition="$museum_info['museum_level_id'] eq $vo['id']">selected</if>>{$vo.name}</option>
+                </volist>
+            </select>
+        </div>
+        <div class="form-group">
+            <label></label>
+            <input type="hidden" name="id" value="{$museum_info.id}">
+            <button type="submit" class="btn btn-primary btn-block">保存</button>
+        </div>
+    </form>
+</block>

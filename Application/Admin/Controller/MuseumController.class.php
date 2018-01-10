@@ -76,4 +76,30 @@ class MuseumController extends BaseController
         $search_result = $museumModel->getSearchResult($year_id);
         $this->ajaxReturn($search_result,'json');
     }
+
+    public function editor()
+    {
+        $museumModel = M('museum');
+        if(IS_POST) {
+            $id = I('post.id', '', intval);
+            if(false === $museumModel->create($_POST)) {
+                $this->error($museumModel->getError());
+            }
+            if(false !== $museumModel->save()) {
+                $this->success('修改成功',cookie('__forward__'));
+            } else {
+                $this->error('修改失败');
+            }
+        } else {
+            $id = I('get.id', '', intval);
+            $where['id'] = array('eq', $id);
+            $museum_info = $museumModel->where($where)->find();
+            $this->museum_info = $museum_info;
+            $museum_type_list = M('museum_type')->field(true)->select();
+            $this->museum_type_list = $museum_type_list;
+            $museum_level_list = M('museum_level')->field(true)->select();
+            $this->museum_level_list = $museum_level_list;
+            $this->display();
+        }
+    }
 }
