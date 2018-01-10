@@ -1,0 +1,6 @@
+#忽略xml文件
+.idea/*
+#忽略Runtime下文件
+/Runtime/*
+*.sql
+*.sql.gz

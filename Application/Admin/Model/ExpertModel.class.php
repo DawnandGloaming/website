@@ -66,6 +66,18 @@ class ExpertModel extends Model
     public function removeAnnualExpert($id, $yearId)
     {
         $where['id'] = array('eq', $id);
+        $expertInfo = $this->where($where)->find();
+        $res = unserialize($expertInfo['year_id']);
+        unset($res[array_search($yearId, $res)]);
+        $expertInfo['year_id'] = serialize(array_values($res));
+        if(false === $this->create($expertInfo)) {
+            return false;
+        }
+        if(false !== $this->save()) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
 }

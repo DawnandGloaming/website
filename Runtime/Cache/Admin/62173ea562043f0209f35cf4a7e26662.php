@@ -115,7 +115,7 @@
                             <td align="center"><?php echo ($vo["nickname"]); ?></td>
                             <td align="center"><?php echo ($vo["indicator_name"]); ?></td>
                             <td align="center">
-                                <button type="button" class="btn btn-sm btn-danger ajax_get confirm" url="<?php echo U('Expert/remove', array('id'=>$vo['id']));?>">删除</button>
+                                <button type="button" class="btn btn-sm btn-danger ajax_get confirm" url="<?php echo U('AssignExpert/remove', array('id'=>$vo['id'], 'year_id' => $year_id));?>">删除</button>
                             </td>
                         </tr><?php endforeach; endif; else: echo "" ;endif; endif; ?>
                 </tbody>
