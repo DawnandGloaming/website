@@ -564,3 +564,36 @@ INFO: [ app_init ] --START--
 INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
 INFO: [ app_init ] --END-- [ RunTime:0.000500s ]
 
+[ 2018-01-09T22:17:00+08:00 ] ::1 /website/admin/database/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000500s ]
+
+[ 2018-01-09T22:17:04+08:00 ] ::1 /website/admin/database/index/Action/backup.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000500s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000500s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] Missing argument 1 for Common\Controller\CommonController::is_mobile(), called in D:\wamp64\www\website\Application\Common\Controller\CommonController.class.php on line 14 and defined D:\wamp64\www\website\Application\Common\Controller\CommonController.class.php 第 22 行.
+SQL: SHOW COLUMNS FROM `en_navigation` [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`sort`,`name`,`url`,`is_show` FROM `en_navigation` WHERE `is_show` = 1  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `en_admin` [ RunTime:0.0005s ]
+SQL: SELECT `id`,`group_id`,`nickname`,`password`,`truename`,`phone`,`email`,`register_time`,`register_ip`,`last_login_time`,`last_login_ip`,`status` FROM `en_admin` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT `id`,`pid`,`sort`,`name`,`url`,`is_show` FROM `en_navigation` WHERE `is_show` = 1 AND `pid` <> 0  [ RunTime:0.0010s ]
+NOTIC: [2] mkdir(): File exists D:\wamp64\www\website\Application\Admin\Controller\DatabaseController.class.php 第 10 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp64\www\website\Application\Common\Library\MySQLReback.class.php 第 18 行.
+NOTIC: [8192] Function mysql_list_tables() is deprecated D:\wamp64\www\website\Application\Common\Library\MySQLReback.class.php 第 123 行.
+
+[ 2018-01-09T22:17:06+08:00 ] ::1 /website/admin/database/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001500s ]
+
+[ 2018-01-09T22:17:22+08:00 ] ::1 /website/admin/database/index/Action/download/file/website_sql_20180109221703.sql.gz.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000500s ]
+
