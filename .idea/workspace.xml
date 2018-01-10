@@ -5,15 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="21e17117-8d25-4097-ba7c-e5bf18d6b524" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Runtime/Cache/Admin/4dc9440a69187d090de30bd57bf0c800.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Runtime/Cache/Admin/68609d35d03bb012546cbfb74c19fa4f.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Runtime/Logs/Admin/18_01_08.log" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Admin/Controller/AssignExpertController.class.php" afterPath="$PROJECT_DIR$/Application/Admin/Controller/AssignExpertController.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Admin/Controller/MuseumController.class.php" afterPath="$PROJECT_DIR$/Application/Admin/Controller/MuseumController.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Admin/View/AssignExpert/index.html" afterPath="$PROJECT_DIR$/Application/Admin/View/AssignExpert/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Public/Common/jquery.search.js" afterPath="$PROJECT_DIR$/Public/Common/jquery.search.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Application/Admin/View/Museum/search.html" afterPath="$PROJECT_DIR$/Application/Admin/View/Museum/showMuseumYearList.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Runtime/Logs/Admin/18_01_09.log" afterPath="$PROJECT_DIR$/Runtime/Logs/Admin/18_01_09.log" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -125,8 +117,8 @@
       <file leaf-file-name="ExpertModel.class.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Application/Admin/Model/ExpertModel.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="830">
-              <caret line="67" column="40" lean-forward="false" selection-start-line="67" selection-start-column="40" selection-end-line="67" selection-end-column="40" />
+            <state relative-caret-position="740">
+              <caret line="42" column="5" lean-forward="true" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -258,10 +250,9 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1912" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1096" />
+    <option name="x" value="1920" />
+    <option name="width" value="1920" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -633,12 +624,12 @@
       <workItem from="1515173241744" duration="34150000" />
       <workItem from="1515374474080" duration="250000" />
       <workItem from="1515382748922" duration="8150000" />
-      <workItem from="1515393264195" duration="49114000" />
+      <workItem from="1515393264195" duration="49653000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="193896000" />
+    <option name="totallyTimeSpent" value="194435000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -650,10 +641,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1912" y="-8" width="1936" height="1096" extended-state="6" />
+    <frame x="1920" y="0" width="1920" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18603411" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18763441" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32916668" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1116,8 +1107,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Application/Admin/Model/ExpertModel.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="830">
-          <caret line="67" column="40" lean-forward="false" selection-start-line="67" selection-start-column="40" selection-end-line="67" selection-end-column="40" />
+        <state relative-caret-position="740">
+          <caret line="42" column="5" lean-forward="true" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="5" />
           <folding />
         </state>
       </provider>
