@@ -50,4 +50,8 @@ $(document).ready(function () {
             // $("#search_result").html(str);
         });
     });
+
+    // $(".declaration_upload").click(function () {
+    //     var museum_id = $()
+    // });
 });

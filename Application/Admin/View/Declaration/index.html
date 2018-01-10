@@ -1,0 +1,82 @@
+<extend name="Public:base"/>
+<block name="body">
+    <div class="top_text">
+        <form class="form-horizontal" role="form">
+        <div class="form-group">
+            <label for="museum_id" class="col-sm-2 control-label">请选择博物馆名称</label>
+            <div class="col-sm-6">
+                <div class="input-group">
+                    <input type="text" class="form-control" id="museum_id">
+                    <span class="input-group-btn">
+						<button class="btn btn-default" type="submit">搜索</button>
+					</span>
+                </div><!-- /input-group -->
+            </div>
+        </div>
+        </form>
+        <form class="form-horizontal" role="form">
+        <div class="form-group">
+            <label for="year" class="col-sm-2 control-label">请选择评审年份</label>
+            <div class="col-sm-6">
+                <div class="input-group">
+                    <select name="year_id" class="form-control" id="year">
+                        <volist name="year_list" id="vo">
+                            <option value="{$vo.id}">{$vo.name}</option>
+                        </volist>
+                    </select>
+                    <span class="input-group-btn">
+                        <button class="btn btn-default" type="submit">搜索</button>
+                    </span>
+                </div><!-- /input-group -->
+            </div>
+        </div>
+        </form>
+    </div>
+    <ol class="breadcrumb admin_nav_bread">
+        <button type="button" class="btn btn-sm btn-success create_layer" url="{:U('Declaration/upload')}" layer-w="450px;" layer-h="670px;">上传申报书</button>
+    </ol>
+
+    <br/><br/><br/>
+
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">
+                申报书
+            </h3>
+        </div>
+        <div class="panel-body">
+            <table class="table table-hover table-condensed table-bordered table_list">
+                <thead>
+                <tr class="active">
+                    <th width="10%">序号</th>
+                    <th width="10%">博物馆名称</th>
+                    <th width="10%">上传时间</th>
+                    <th width="10%">参评年份</th>
+                    <th width="10%">操作</th>
+                </tr>
+                </thead>
+                <tbody>
+                <empty name="declaration_list">
+                    <tr>
+                        <td align="center" colspan="5">
+                            <span style="color: red;">暂无申报书数据</span>
+                        </td>
+                    </tr>
+                    <else/>
+                    <volist name="declaration_list" id="vo" key="k">
+                        <tr>
+                            <td align="center">{$k}</td>
+                            <td align="center">{$vo.museum_name}</td>
+                            <td align="center">{$vo.upload_time}</td>
+                            <td align="center">{$vo.year}</td>
+                            <td align="center">
+                                <button type="button" class="btn btn-sm btn-danger ajax_get confirm" url="{:U('AssignExpert/remove', array('id'=>$vo['id'], 'year_id' => $year_id))}">删除</button>
+                            </td>
+                        </tr>
+                    </volist>
+                </empty>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</block>

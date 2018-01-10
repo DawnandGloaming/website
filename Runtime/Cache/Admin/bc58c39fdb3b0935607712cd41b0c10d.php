@@ -76,9 +76,10 @@
     <table class="table table-hover table-condensed table-bordered table_list">
         <thead>
         <tr class="active">
-            <th width="10%">专家姓名</th>
-            <th width="10%">一级指标</th>
-            <th width="10%">操作</th>
+            <th width="10%">序号</th>
+            <th width="30%">专家姓名</th>
+            <th width="30%">一级指标</th>
+            <th width="30%">操作</th>
         </tr>
         </thead>
         <tbody>
@@ -88,7 +89,8 @@
                 </td>
             </tr>
             <?php else: ?>
-            <?php if(is_array($expert_list)): $i = 0; $__LIST__ = $expert_list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><tr>
+            <?php if(is_array($expert_list)): $k = 0; $__LIST__ = $expert_list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($k % 2 );++$k;?><tr>
+                    <td align="center"><?php echo ($k); ?></td>
                     <td align="center"><?php echo ($vo["nickname"]); ?></td>
                     <td align="center"><?php echo ($vo["indicator_name"]); ?></td>
                     <td align="center">
